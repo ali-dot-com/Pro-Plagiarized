@@ -1,0 +1,64 @@
+*{
+    font-family: 'Urbanist', sans-serif;
+}
+.signin-image{
+    background-image: url("../images/na_march_28.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 15px 15px 0px;
+    height: 94vh;
+}
+.sign-In-Heading{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.sign-In-Heading > span{
+    background-color: rgb(0,124,188);
+    border-radius: 15px;
+    color: rgb(241,241,241);
+    padding: 0px 10px 0px 10px;
+}
+
+.right-items{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control{
+    width: 20rem;
+    margin-bottom: 0.5em;
+}
+
+.form{
+    flex-direction: column;
+}
+
+.form button{
+    margin-top: 1em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .signin-image{
+        display: none;
+    }
+    .sign-In-Heading{
+        font-size: 3rem;
+    }
+}
+
+.forget-password{
+    color: inherit;
+    font-weight: 600;
+}
+.forget-password:hover {
+    color: black;
+}
+.new-account > a{
+    font-weight: 600;
+}
+.new-account>a:hover {
+    color: black;
+}
