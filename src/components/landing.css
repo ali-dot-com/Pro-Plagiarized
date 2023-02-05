@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: none;
+}
+
+nav{
+    height: 11vh;
+}
+
+.navbar{
+    background-color: rgb(223, 223, 223);
+    color: rgb(0,124,188);
+    
+}
