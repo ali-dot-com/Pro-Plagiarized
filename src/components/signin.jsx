@@ -18,14 +18,14 @@ function App() {
                             <div class="form-floating">
                                 <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
                                 <label for="floatingPassword">Password</label>
-                                <a href="#" className="forget-password">Forgot Password?</a>
+                                <a href="#!" className="forget-password">Forgot Password?</a>
                             </div>
                             <div className="form-floating">
                                 <button type="" className="btn btn-primary">Sign In</button>
                             </div>
                             <br /><br /><br />
                             <span className="new-account">Dont have an account?&nbsp;
-                                <a href="#" className="forget-password">Sign Up</a>
+                                <a href="#!" className="forget-password">Sign Up</a>
                             </span>
                         </form>
                     </div>
