@@ -1,13 +1,15 @@
 import './App.css';
-// import LogIn from './components/signin';
-// import Signup from './components/signup';
-import LandingPage from './components/landingPage';
+import LogIn from './components/signin';
+import Signup from './components/signup';
+import Aboutus from './components/AboutUs';
+import Landing from './components/LandingPage'
 
 function App() {
   return(
     // <LogIn/>
     // <Signup />
-    <LandingPage/>
+    // <Aboutus/>
+    <Landing/>
   )
 }
 

@@ -1,150 +1,100 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: none;
+}
+
+nav {
+    height: 10vh;
     width: 100vw;
 }
 
-nav{
-    height: 11vh;
-    width: 100vw;
+.navbar {
+    background-color: rgb(211, 211, 211);
 }
 
-.navbar{
-    background-color: rgb(211,211,211);
+.chaapa-c {
+    color: rgba(0, 124, 188, 1);
 }
 
-.landing-1{
-    margin-top: 5.9em;
-    /* background-color: rgba(255, 255, 255, 0.9); */
-    background-color: #CFE8F6;
-    /* border-radius: 0px 30px 30px 0px; */
-}
-
-.chaapa-c{
-    color: rgba(0,124,188,1);
-}
-
-.chaapa-heading{
+.chaapa-heading {
     margin-top: -0.7em;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 800;
 }
 
-.landing-1 > P{
+.landing-1>P {
     margin: .5em;
-    padding: 1em;
+    padding: 1.5em;
     color: black;
 }
 
-.right-img{
-    padding: 0;
+.right-img>img {
+    border-radius: 30px 30px 50px 3px;
+    width: 28rem;
 }
 
-.right-img > img{
-    border-radius: 30px 30px 50px 3px; 
-    width: 32rem;
-}
-
-.for-individuals-left > img{
+.for-individuals-left>img {
     border-radius: 0px 20px 20px 0px;
     width: 30rem;
     margin-left: 2em;
 }
 
-.for-education > img{
+.for-education>img {
     border-radius: 20px 0px 0px 20px;
     width: 30rem;
     margin-left: 2em;
 }
 
-.for-individuals{
+.for-individuals {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-.for-individuals-right > h1{
+.for-individuals-right>h1 {
     margin-top: 1em;
     font-weight: 600;
 }
 
-.features{
-    margin-top: 4em;
+
+.features {
+    margin-top: 3em;
     background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 40% 40% 0% 0%;
+    border-radius: 45% 45% 0% 0%;
     background-color: #CFE8F6;
-    height: 60vh;
-    padding-top: 0em;
+    height: 50vh;
+}
+.features-item{
+    margin-top: -2em;
+}
+.features-item>img {
+    height: 4rem;
+    transition: .3s;
 }
 
-.join-us-today > h1{
-    font-size: 3.5em;
-    font-weight: bold;
-}
-
-.features-item > img{
-    height: 5rem;
-}
-
-.features-item > h3{
+.features-item>h3 {
     margin-top: 1em;
     margin-left: .5em;
 }
 
-
-.navbar-sign-btns > .btn{
-    margin: 10px;
+.features-item > img:hover{
+    transform: scale(1.1);
 }
-
-.nav-logo{
-    font-size: 2rem;
-    /* color: rgb(230, 230, 230); */
-}
-
-.nav-items{
-    margin-left: 2em;
-}
-
-.navbar{
-    box-shadow: 0px 10px 12px #969696;
-    margin-bottom: 3em;
-}
-
-
-
-
-
 
 
 
 
 @media only screen and (max-width: 500px) {
     .chaapa-heading {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
 @media only screen and (max-width: 780px) {
     .right-img>img {
         display: none;
-    }
-
-    .features{
-        height: 100%;
-    }
-
-    .join-us-today > h1{
-        font-size: 2rem;
-    }
-
-    .features-item > img{
-        height: 3rem;
-    }
-
-    .features-item{
-        margin: 2em 0em 2em 0em;
     }
 }
