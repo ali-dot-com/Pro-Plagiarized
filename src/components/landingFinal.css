@@ -1,0 +1,559 @@
+.navbar {
+    height: 10vh;
+    box-shadow: none;
+}
+
+.underlined-header {
+    border: 2px solid rgb(0, 100, 150);
+    max-width: 25%;
+    margin-left: .6em;
+}
+
+.features-icon {
+    max-width: 18%;
+    margin: 2em auto 0em auto;
+    height: auto;
+}
+
+.features-header>h1 {
+    font-weight: 600 !important;
+    font-size: 3.5rem;
+    color: rgb(0, 65, 161);
+}
+
+.professor {
+    margin-bottom: 2.2em;
+}
+
+.arrow {
+    text-decoration: none;
+}
+
+.arrow>img {
+    height: 35px;
+}
+
+
+/*Neo Brutalism pricing card*/
+.stepCard {
+    width: 190px;
+    height: 254px;
+    background: #00FFA0;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: .5vmin solid #05060f;
+    box-shadow: .4rem .4rem #05060f;
+    overflow: hidden;
+}
+
+/*Card content*/
+.pricing-block-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.pricing-plan {
+    color: #05060f;
+    font-size: 1.3rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.price-value {
+    display: flex;
+    color: #05060f;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.pricing-note {
+    opacity: .8;
+}
+
+.loader {
+    --path: #2f3545;
+    --dot: #5628ee;
+    --duration: 3s;
+    width: 44px;
+    height: 44px;
+    position: relative;
+}
+
+.loader:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: var(--dot);
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.loader svg rect,
+.loader svg polygon,
+.loader svg circle {
+    fill: none;
+    stroke: var(--path);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.loader svg polygon {
+    stroke-dasharray: 145 76 145 76;
+    stroke-dashoffset: 0;
+    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader.triangle {
+    width: 48px;
+}
+
+.loader.triangle:before {
+    left: 21px;
+    transform: translate(-10px, -18px);
+    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader {
+    display: inline-block;
+    margin: 0 16px;
+}
+
+
+.price-nav {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+    height: auto;
+    display: grid;
+    grid: auto / auto-flow;
+    padding: 3px;
+    margin-bottom: 16px;
+    background: #eee;
+    border-radius: 12px;
+}
+
+.price-home {
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.price-home.active {
+    background: rgba(11, 95, 215, 0.8);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 70%;
+    border-radius: 10px;
+    height: 7em;
+    font-size: 44px;
+    color: rgba(231, 231, 231, 1);
+    box-shadow: 10px 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+.home {
+    border: 0;
+    background: rgba(31, 31, 31, 0.9);
+}
+
+.about {
+    background: rgba(231, 231, 231, 1);
+    color: rgba(31, 31, 31, 0.9);
+    border: 0;
+}
+
+
+
+.cta {
+    display: flex;
+    padding: 8px 25px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    background: rgba(11, 95, 215, 0.8);
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+    border: none;
+}
+
+.cta:focus {
+    outline: none;
+}
+
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.cta .second {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover .second {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+.span {
+    transform: skewX(15deg)
+}
+
+.second {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+}
+
+.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.cta:hover .three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+
+
+
+
+
+/* ----------- ANIMATIONS ----------- */
+
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.slide-in-bck-center {
+    -webkit-animation: slide-in-bck-center 1.5s ease-in-out both;
+    animation: slide-in-bck-center 1.5s ease-in-out both;
+}
+
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes slide-in-bck-center {
+    0% {
+        -webkit-transform: translateZ(600px);
+        transform: translateZ(600px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bck-center {
+    0% {
+        -webkit-transform: translateZ(600px);
+        transform: translateZ(600px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+
+    50% {
+        fill: #FBC638;
+    }
+
+    100% {
+        fill: white;
+    }
+}
+
+
+@keyframes pathTriangle {
+    33% {
+        stroke-dashoffset: 74;
+    }
+
+    66% {
+        stroke-dashoffset: 147;
+    }
+
+    100% {
+        stroke-dashoffset: 221;
+    }
+}
+
+@keyframes dotTriangle {
+    33% {
+        transform: translate(0, 0);
+    }
+
+    66% {
+        transform: translate(10px, -18px);
+    }
+
+    100% {
+        transform: translate(-10px, -18px);
+    }
+}
+
+@keyframes pathRect {
+    25% {
+        stroke-dashoffset: 64;
+    }
+
+    50% {
+        stroke-dashoffset: 128;
+    }
+
+    75% {
+        stroke-dashoffset: 192;
+    }
+
+    100% {
+        stroke-dashoffset: 256;
+    }
+}
+
+@keyframes dotRect {
+    25% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(18px, -18px);
+    }
+
+    75% {
+        transform: translate(0, -36px);
+    }
+
+    100% {
+        transform: translate(-18px, -18px);
+    }
+}
+
+@keyframes pathCircle {
+    25% {
+        stroke-dashoffset: 125;
+    }
+
+    50% {
+        stroke-dashoffset: 175;
+    }
+
+    75% {
+        stroke-dashoffset: 225;
+    }
+
+    100% {
+        stroke-dashoffset: 275;
+    }
+}
+
+
+
+
+
+
+/* ============ MEDIA QUERIES =========== */
+
+
+
+@media only screen and (min-width: 800px) {
+    .professor>img {
+        height: auto;
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    .navbar {
+        height: 8vh;
+    }
+}
+
+@media only screen and (min-width: 1900px) {
+    .header {
+        font-size: 3.2rem;
+    }
+}
+
+@media only screen and (width >=1370px) {
+    .description {
+        font-size: 1.3rem;
+    }
+
+    .text-fluid {
+        font-size: larger;
+    }
+
+    .individual-feature>span {
+        font-size: 1.3rem;
+        /* padding: 0px 15px 0px 15px; */
+    }
+}
+
+@media only screen and (height > 850px) {
+    .text-fluid {
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (width < 700px) {
+    .professor {
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (width < 450px) {
+    .features-header>h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (width < 1010px) {
+    .professor {
+        margin-bottom: 4em;
+    }
+}
+
+@media only screen and (width > 2180px) {
+    .description {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (width < 400px) or (width > 1300px) {
+    .cta {
+        padding: 6px 20px;
+        font-size: 18px;
+    }
+
+    .cta:hover .three {
+        animation: color_anim 1s infinite 0.2s;
+    }
+
+    .cta:hover .one {
+        transform: translateX(0%);
+        animation: color_anim 1s infinite 0.6s;
+    }
+
+    .cta:hover .two {
+        transform: translateX(0%);
+        animation: color_anim 1s infinite 0.4s;
+    }
+
+    .cta:focus {
+        outline: none;
+    }
+
+    .cta:hover {
+        transition: 0.5s;
+        box-shadow: 6px 6px 0 #FBC638;
+    }
+
+    .cta .second {
+        transition: 0.5s;
+        margin-right: 0px;
+    }
+
+    .cta:hover .second {
+        transition: 0.5s;
+        margin-right: 45px;
+    }
+}
+
+@media only screen and (width < 1000px) {
+    .loader {
+        display: none;
+    }
+
+    .stepOne > .stepCard, .stepTwo>.stepCard, .stepThree>.stepCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        align-items: space-evenly;
+        margin: 2em 0 0 0 ;
+    }
+
+
+}
