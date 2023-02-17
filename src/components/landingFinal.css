@@ -3,14 +3,12 @@
     box-shadow: none;
 }
 
-.underlined-header {
-    border: 2px solid rgb(0, 100, 150);
-    max-width: 25%;
-    margin-left: .6em;
+.header{
+    font-size: 2.6rem;
 }
 
 .features-icon {
-    max-width: 18%;
+    max-width: 15%;
     margin: 2em auto 0em auto;
     height: auto;
 }
@@ -18,11 +16,30 @@
 .features-header>h1 {
     font-weight: 600 !important;
     font-size: 3.5rem;
-    color: rgb(0, 65, 161);
 }
 
+.feature-items{
+    color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    width: 100%;
+    margin: 1.2em;
+    padding: 1em;
+    box-shadow: 5px 5px 15px rgba(11, 95, 215, 0.5)
+}
+
+.feature-items > img{
+    max-width: 20%;
+}
+.features-card {
+    width: 400px;
+    height: 320px;
+    border-radius: 20px;
+    margin: 5em 2em 0em 5em;
+    background: rgba(0, 105, 215, 0.8);
+    box-shadow: 18px 18px 20px #aaaaaa;
+}
 .professor {
-    margin-bottom: 2.2em;
+    margin-bottom: 2.5em;
 }
 
 .arrow {
@@ -30,15 +47,14 @@
 }
 
 .arrow>img {
-    height: 35px;
+    height: 40px;
 }
 
 
-/*Neo Brutalism pricing card*/
 .stepCard {
-    width: 190px;
-    height: 254px;
-    background: #00FFA0;
+    width: 300px;
+    height: 200px;
+    background: #00ffa2;
     padding: 1rem;
     border-radius: 1rem;
     border: .5vmin solid #05060f;
@@ -46,12 +62,11 @@
     overflow: hidden;
 }
 
-/*Card content*/
 .pricing-block-content {
     display: flex;
     height: 100%;
     flex-direction: column;
-    gap: .5rem;
+    gap: .3rem;
 }
 
 .pricing-plan {
@@ -70,67 +85,7 @@
 }
 
 .pricing-note {
-    opacity: .8;
-}
-
-.loader {
-    --path: #2f3545;
-    --dot: #5628ee;
-    --duration: 3s;
-    width: 44px;
-    height: 44px;
-    position: relative;
-}
-
-.loader:before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    position: absolute;
-    display: block;
-    background: var(--dot);
-    top: 37px;
-    left: 19px;
-    transform: translate(-18px, -18px);
-    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-}
-
-.loader svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.loader svg rect,
-.loader svg polygon,
-.loader svg circle {
-    fill: none;
-    stroke: var(--path);
-    stroke-width: 10px;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-}
-
-.loader svg polygon {
-    stroke-dasharray: 145 76 145 76;
-    stroke-dashoffset: 0;
-    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-}
-
-.loader.triangle {
-    width: 48px;
-}
-
-.loader.triangle:before {
-    left: 21px;
-    transform: translate(-10px, -18px);
-    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-}
-
-.loader {
-    display: inline-block;
-    margin: 0 16px;
+    opacity: .9;
 }
 
 
@@ -176,8 +131,9 @@
 }
 
 .home {
-    border: 0;
-    background: rgba(31, 31, 31, 0.9);
+    background: rgba(231, 231, 231, 1);
+        color: rgba(31, 31, 31, 0.9);
+        border: 0;
 }
 
 .about {
@@ -195,7 +151,7 @@
     font-size: 25px;
     color: white;
     background: rgba(11, 95, 215, 0.8);
-    transition: 1s;
+    transition: .5s;
     box-shadow: 6px 6px 0 black;
     transform: skewX(-15deg);
     border: none;
@@ -242,21 +198,139 @@
 }
 
 .cta:hover .three {
-    animation: color_anim 1s infinite 0.2s;
+    animation: color_anim .7s infinite 0.2s;
 }
 
 .cta:hover .one {
     transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s;
+    animation: color_anim .7s infinite 0.6s;
 }
 
 .cta:hover .two {
     transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s;
+    animation: color_anim .7s infinite 0.4s;
+}
+
+.rotating{
+    animation: rotating 6s linear infinite;
+}
+
+.imgArrows{
+    vertical-align: middle;
+}
+
+@keyframes rotating{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.calculator{
+    color: white;
+    font-weight: 600;
+    background: rgba(31, 31, 31, .8);
+    margin: 2em;
+    border-radius: 10px;
 }
 
 
+.orderNow{
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 15px;
+    background-color: rgba(231, 231, 231, 0.9);
+    color: rgba(17, 17, 17, 0.9);
+    font-weight: 600;
 
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 2.5rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
 
 
 
@@ -429,7 +503,91 @@
     }
 }
 
+.tracking-in-contract-bck {
+    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
 
+.tracking-in-contract-bck-top {
+    -webkit-animation: tracking-in-contract-bck-top .2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract-bck-top .2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract-bck-top {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px) translateY(-300px);
+        transform: translateZ(400px) translateY(-300px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-contract-bck-top {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px) translateY(-300px);
+        transform: translateZ(400px) translateY(-300px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
 
 
 
@@ -487,12 +645,17 @@
     .features-header>h1 {
         font-size: 2.5rem;
     }
+    .stepCard {
+        width: 200px;
+        height: 300px;
+    }
 }
 
 @media only screen and (width < 1010px) {
     .professor {
         margin-bottom: 4em;
     }
+
 }
 
 @media only screen and (width > 2180px) {
@@ -502,6 +665,7 @@
 }
 
 @media only screen and (width < 400px) or (width > 1300px) {
+
     .cta {
         padding: 6px 20px;
         font-size: 18px;
@@ -545,6 +709,16 @@
     .loader {
         display: none;
     }
+    .imgArrows{
+        display: none;
+    }
+
+    .header{
+        font-size: 2rem;
+    }
+    .header > span{
+        font-size: 2.5rem;
+    }
 
     .stepOne > .stepCard, .stepTwo>.stepCard, .stepThree>.stepCard {
         display: flex;
@@ -557,3 +731,19 @@
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
