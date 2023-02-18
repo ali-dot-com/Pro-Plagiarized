@@ -152,8 +152,7 @@
     color: white;
     background: rgba(11, 95, 215, 0.8);
     transition: .5s;
-    box-shadow: 6px 6px 0 black;
-    transform: skewX(-15deg);
+    box-shadow: 6px 6px 10px rgba(17, 17, 17, 0.9);
     border: none;
 }
 
@@ -163,7 +162,7 @@
 
 .cta:hover {
     transition: 0.5s;
-    box-shadow: 10px 10px 0 #FBC638;
+    box-shadow: 5px 5px 0 #FBC638;
 }
 
 .cta .second {
@@ -173,12 +172,9 @@
 
 .cta:hover .second {
     transition: 0.5s;
-    margin-right: 45px;
+    margin-right: 20px;
 }
 
-.span {
-    transform: skewX(15deg)
-}
 
 .second {
     width: 20px;
@@ -332,6 +328,18 @@ button:hover .button-text {
     color: #fff;
 }
 
+.testimonial{
+    background: rgba(202, 202, 202, 0.9);
+}
+.Usercard{
+    background: rgba(241, 241, 241, 1);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(150, 150, 150, 0.7);
+}
+
+.joinUsToday{
+    background: #769dff;
+}
 
 
 /* ----------- ANIMATIONS ----------- */
