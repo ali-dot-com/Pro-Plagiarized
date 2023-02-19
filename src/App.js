@@ -2,16 +2,16 @@ import './App.css';
 import LogIn from './components/signin';
 import Signup from './components/signup';
 import Aboutus from './components/AboutUs';
-import Landing from './components/LandingPage'
+//import Landing from './components/LandingPage'
 import LandingFinal from './components/LandingPageFinal'
 
 function App() {
   return(
     // <LogIn/>
-    // <Signup />
+     <Signup />
     // <Aboutus/>
     // <Landing/>
-    <LandingFinal/>
+    //<LandingFinal/>
   )
 }
 
