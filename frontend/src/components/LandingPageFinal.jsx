@@ -15,6 +15,7 @@ import SlideRoutes from 'react-slide-routes';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit';
 import FeaturesCard from './FeaturesCard';
 import Button from 'react-bootstrap/Button'
+import NavbarLandingPage from './NavbarLandingPage/NavbarLandingPage';
 
 const RemovePlagiarism = () =>
     <div className="card home mb-5 text-center mx-auto">
@@ -172,11 +173,13 @@ function LandingPageFinal() {
         apiKey: "free"
     });
 
-    let priceHome = "price-home p-2 fw-bold";
+    let priceHome = "p-2 fw-bold";
 
+    const [priceMode, setPriceMode] =  useState(0);
 
     return (
         <>
+        <NavbarLandingPage/>
             <div className="container-fluid">
                 <Navbar collapseOnSelect expand="lg" bg="white" variant="dark" className='navbar'>
                     <Container>
@@ -569,17 +572,22 @@ function LandingPageFinal() {
 
                 <div className="row h-auto">
                     <div className="col-lg-12 d-flex flex-column justify-content-center">
-                        <BrowserRouter className='Pricing-Slider'>
+                        <div className='Pricing-Slider'>
                             <nav className='price-nav mb-5'>
-                                <NavLink className={priceHome} to="/" end>Remove Plagiarism</NavLink>
-                                <NavLink className={priceHome} to="/about">Detect Plagiarism</NavLink>
-                            </nav>
+                                <Button variant="light" className={priceMode === 0 ? "p-2 fw-bold price-homeActive": "p-2 fw-bold price-home"} onClick={()=> {setPriceMode(0)}}>Remove Plagiarism</Button>
+                                <Button variant="light" className={priceMode === 1 ? "p-2 fw-bold price-homeActive": "p-2 fw-bold price-home"} onClick={()=> {setPriceMode(1)}}>Detect Plagiarism</Button>
 
-                            <SlideRoutes>
+                                
+                            </nav>
+                            {
+                                priceMode === 0 ? <RemovePlagiarism/> : <DetectPlagiarism/>
+                            }
+
+                            {/*<SlideRoutes>
                                 <Route path="/" element={<RemovePlagiarism />} />
-                                <Route path="/about" element={<DetectPlagiarism />} />
-                            </SlideRoutes>
-                        </BrowserRouter>
+                                <Route path="/pleg" element={<DetectPlagiarism />} />
+                            </SlideRoutes>*/}
+                        </div>
 
                     </div>
                 </div>

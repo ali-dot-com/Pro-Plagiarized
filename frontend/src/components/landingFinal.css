@@ -1,5 +1,4 @@
 .navbar {
-    height: 10vh;
     box-shadow: none;
 }
 
@@ -109,7 +108,7 @@
     font-weight: 600;
 }
 
-.price-home.active {
+.price-homeActive {
     background: rgba(11, 95, 215, 0.8);
     color: white;
     font-weight: 600;
@@ -611,9 +610,7 @@ button:hover .button-text {
 }
 
 @media only screen and (min-height: 800px) {
-    .navbar {
-        height: 8vh;
-    }
+    
 }
 
 @media only screen and (min-width: 1900px) {
