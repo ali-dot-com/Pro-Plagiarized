@@ -180,7 +180,7 @@ function LandingPageFinal() {
     return (
         <>
         <NavbarLandingPage/>
-            <div className="container-fluid">
+          {/*}  <div className="container-fluid">
                 <Navbar collapseOnSelect expand="lg" bg="white" variant="dark" className='navbar'>
                     <Container>
                         <Navbar.Brand href="#home" className='nav-logo text-dark'>turnitin<strong>PRO</strong></Navbar.Brand>
@@ -196,7 +196,7 @@ function LandingPageFinal() {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-            </div>
+    </div>*/}
 
 
             <div className="container-fluid">
