@@ -137,7 +137,7 @@ function LandingPageFinal() {
 
     return (
         <>
-        {/* <NavbarLandingPage/> */}
+        <NavbarLandingPage/>
             <div className="mt-5">.</div>
 
             <div className="container-fluid mainBackgroundImage">
@@ -201,7 +201,7 @@ function LandingPageFinal() {
                     <div className="col-lg-4">
                         {/* <button className='btn btn-outline-light p-3'>order now</button>
                         <button className='btn btn-outline-light p-3'>order now</button> */}
-                                <button class="learn-more"> Learn More
+                                <button class="learn-more"> Order Now
                                 </button>
                     </div>
                 </div>
@@ -434,7 +434,7 @@ function LandingPageFinal() {
                         Order Now
                     </button> */}
 
-                    <button class="learn-more mx-auto mt-5">
+                    <button class="get-services mx-auto mt-5">
                         <span class="circle" aria-hidden="true">
                             <span class="icon arrow"></span>
                         </span>
