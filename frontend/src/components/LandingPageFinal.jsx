@@ -93,12 +93,12 @@ function LandingPageFinal() {
 
     const headArray = ["Qualified Writer", "Highest Grade Guaranteed", "All Day, Everyday Service",
         "Fastest Report Time", "Quality Assured", "Error Free Results"]
-    const textArray = ["Lorem Ipsum ajdnkjasnd kjansn dakjn djkand kjand kjankjdn kjasnd kjansjkd nasj dkas ",
-        "aksjdnkajsndkjas dkjandkj snAjk nkajns dkjas kdjas dkasd hasdjvdgv ashgdvahv dvhags dvh",
-        "sdnkjan dandkja ndkas dbhjasdbhadasdqwfdhbnkjdsfsbdjfhjfvv gsvhfv gshvfshsvhfsvhgfvshf v svfhgsdvf ",
-        "asbdjhbshj bhfsdf ad bdlfjdbhfhjbfhasfvvfbsjfbhj ff FIJFIBHSHABSHJBS DHBHJBADSssssssssss",
-        "a hsbjshb dbjhs hkjasFH vvsfjvhsb,jfdsfh jf jfh wehbfkwje fewvhfgghsvfgsfhhf f  s j gjhsdhf",
-        "Tinakd hiasdknaskdn jkasjdk asdqwwha bjashbdh jah bdhbjahbdsahdb ha   das dbja basbjdba sbjabsdjbdjs"]
+    const textArray = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia neque felis, nec porttitor felis vulputate non. Cras viverra rutrum orci, vel tincidunt libero vulputate vel. Aenean aliquet augue elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia neque felis, nec porttitor felis vulputate non. Cras viverra rutrum orci, vel tincidunt libero vulputate vel. Aenean aliquet augue elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia neque felis, nec porttitor felis vulputate non. Cras viverra rutrum orci, vel tincidunt libero vulputate vel. Aenean aliquet augue elit. ",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia neque felis, nec porttitor felis vulputate non. Cras viverra rutrum orci, vel tincidunt libero vulputate vel. Aenean aliquet augue elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia neque felis, nec porttitor felis vulputate non. Cras viverra rutrum orci, vel tincidunt libero vulputate vel. Aenean aliquet augue elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia neque felis, nec porttitor felis vulputate non. Cras viverra rutrum orci, vel tincidunt libero vulputate vel. Aenean aliquet augue elit."]
 
     const FeatureClick = (id) => {
         if (id === 1) {
@@ -137,12 +137,11 @@ function LandingPageFinal() {
 
     return (
         <>
-        <NavbarLandingPage/>
-            <div className="mt-5">.</div>
+        <NavbarLandingPage />
 
-            <div className="container-fluid mainBackgroundImage">
+            <div className="container-fluid mt-2 mainBackgroundImage">
 
-                <div className="row mt-5">
+                <div className="row">
                 
                     <div className="col-lg-12 d-flex justify-content-center flex-column">
                         <div className="row tracking-in-expand">
@@ -190,7 +189,7 @@ function LandingPageFinal() {
                             />
                 </div>
 
-                <div className="row banner border-primary px-5 py-4">
+                <div className="row banner border-primary p-5">
                     <div className="col-lg-8">
                         <h2 className='h1'
                         style={{fontFamily: "Arvo, serif", color: "#F1FFFF"}}>
@@ -198,143 +197,84 @@ function LandingPageFinal() {
                         </h2>
                         <p className='text-light h5'>Get certified professional's opinions at an extremely low price!</p>
                     </div>
+
                     <div className="col-lg-4">
-                        {/* <button className='btn btn-outline-light p-3'>order now</button>
-                        <button className='btn btn-outline-light p-3'>order now</button> */}
-                                <button class="learn-more"> Order Now
-                                </button>
+                        <button class="learn-more">Order Now</button>
                     </div>
                 </div>
 
-
-
-{/*                         
-                        <div className="row px-4 tracking-in-expand">
-                            <h1 className='header fw-bold'>
-                                Detect and Remove <span style={{ fontSize: "3rem", color: "rgb(5,100,225)" }}>Plagiarism.</span>
-                            </h1>
-                        </div>
-
-                        <div className="container-fluid backgorundBody justify-content-around">
-                            <div className="row text-center">
-                                <div className="col-lg-4">
-                                    <div className={temp === 1 ? "btn btn-outline-primary px-5 py-3 fw-bold" : "btn btn-outline-primary px-3 py-3 fw-bold"}
-                                        onClick={() => setTemp(1)}
-                                        style={temp === 1 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
-                                        Remove Plagiarism
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4">
-                                    <div className={temp === 2 ? "btn btn-outline-primary px-5 py-3 fw-bold" : "btn btn-outline-primary px-3 py-3 fw-bold"}
-                                        onClick={() => setTemp(2)}
-                                        style={temp === 2 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}
-                                    >Detect Plagiarism</div>
-                                </div>
-                            </div>
-                        </div> */}
-
-                        {/* <div className="row px-4 tracking-in-contract-bck-top">
-                            <p className='description tracking-in-contract-bck'>
-                                A website that offers a "research paper paraphrasing and plagiarism checker" service allows users to check their written work for plagiarism and reword text to avoid duplication.
-                            </p>
-
-                            <div className="container-fluid">
-                                <div className="row my-3">
-                                    <h4 className='text-center fw-bold'>Upload a file to get started</h4>
-                                </div>
-
-                                <div className="row d-flex flex-row justify-content-center">
-                                    <div className="r-plagiarism col-lg-4 d-flex flex-row justify-content-center">
-
-                                        <button className="btn btn-outline-primary px-5 py-4 my-2 fw-bold"
-                                            id='r-plagiarism'
-                                            onClick={handleClickR}>
-                                            Remove Plagiarism
-                                        </button>
-                                    </div>
-                                    <div className="d-plagiarism col-lg-4 d-flex flex-row justify-content-center">
-                                        <button className="btn btn-outline-primary px-5 py-4 my-2 fw-bold"
-                                            id='d-plagiarism'
-                                            onClick={handleClick}>
-                                            Detect Plagiarism
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <UploadDropzone uploader={uploader}
-                                options={{ multi: true }}
-                                onComplete={files => console.log(files)}
-                                width="auto"
-                                height="250px"
-                            />
-                        </div> */}
-
-                    </div>
-
-                    {/* <div className="col-lg-4 professor d-flex align-items-center justify-content-center flex-column">
-                        <img src={proff} alt="" className="img-fluid" />
-                    </div> */}
-                </div>
+            </div>
+        </div>
 
                 {/* ------------- FEATURES ------------------ */}
 
-                <div className="features-header my-4">
+                <div className="features-header mt-4">
                     <h1 className='text-center'>Features</h1>
                 </div>
 
-
-                <div className="row my-3 featuresFinal fw-semibold d-flex flex-row justify-content-center">
+                <div className="row featuresFinal fw-semibold d-flex flex-row justify-content-center">
                     <div className="col-lg-7 features-item">
                         <div className="row d-flex flex-row justify-content-center">
-                            <div className="col-lg-6 features-1 d-flex flex-column align-items-center p-5">
+                            <div className="col-lg-6 features-1 d-flex flex-column align-items-center ">
 
-                                <div className="btn feature-items d-flex flex-row justify-content-center align-items-center"
+                                <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
                                     onClick={() => FeatureClick(1)}
                                 >
                                     <img src={i6} alt="proff" className="img-fluid" />
                                     <h5 className='px-3'>Qualified Writers</h5>
-                                </div>
+                                </button>
 
-                                <div className="btn feature-items d-flex flex-row justify-content-center align-items-center"
-                                    onClick={() => FeatureClick(2)}>
+                                <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
+                                    onClick={() => {FeatureClick(2)}}>
                                     <img src={i7} alt="proff" className="img-fluid" />
-                                    <h5 className='px-3'>Highest Grade Guaranteed</h5>
-                                </div>
+                                    <h5 className='px-3'>Highest Grade</h5>
+                                </button>
 
-                                <div className="btn feature-items d-flex flex-row justify-content-center align-items-center"
+                                <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
                                     onClick={() => FeatureClick(3)}>
                                     <img src={i1} alt="proff" className="img-fluid" />
-                                    <h5 className='px-3'>All Day, Everyday Service</h5>
-                                </div>
+                                    <h5 className='px-3'>Everyday Service</h5>
+                                </button>
+
+                                <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
+                                    onClick={() => FeatureClick(3)}>
+                                    <img src={i1} alt="proff" className="img-fluid" />
+                                    <h5 className='px-3'>Everyday Service</h5>
+                                </button>
                             </div>
 
-                            <div className="col-lg-6 features-1 d-flex flex-column align-items-center p-5">
+                            <div className="col-lg-6 features-1 d-flex flex-column align-items-center ">
 
-                                <div className="btn feature-items d-flex flex-row justify-content-center align-items-center"
+                                <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
                                     onClick={() => FeatureClick(4)}>
                                     <img src={i2} alt="proff" className="img-fluid" />
                                     <h5 className='px-3'>Fastest Report Time</h5>
-                                </div>
+                                </button>
 
-                                <div className="btn feature-items d-flex flex-row justify-content-center align-items-center"
+                                <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
                                     onClick={() => FeatureClick(5)}>
                                     <img src={i5} alt="proff" className="img-fluid" />
                                     <h5 className='px-3'>Quality Assured</h5>
-                                </div>
+                                </button>
 
-                                <div className="btn feature-items d-flex flex-row justify-content-center align-items-center"
+                                <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
                                     onClick={() => FeatureClick(6)}>
                                     <img src={i4} alt="proff" className="img-fluid" />
                                     <h5 className='px-3'>Error Free Results</h5>
-                                </div>
+                                </button>
+
+                                <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
+                                    onClick={() => FeatureClick(6)}>
+                                    <img src={i4} alt="proff" className="img-fluid" />
+                                    <h5 className='px-3'>Error Free Results</h5>
+                                </button>
                             </div>
                         </div>
                     </div>
 
+                <div className="col-lg-4 d-flex justify-content-center align-items-center">
                     <FeaturesCard head={header} text={text} />
+                </div>
 
                     <div className="container-fluid">
                         <div className="row ">
