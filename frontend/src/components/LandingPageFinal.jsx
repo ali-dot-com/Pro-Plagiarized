@@ -4,7 +4,6 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import proff from "../assets/professor (Medium).jpg"
 import { styled } from '@mui/material/styles';
-import Switch from '@mui/material/Switch';
 import { Uploader } from "uploader";
 import { UploadDropzone } from "react-uploader";
 import {  useState } from 'react';
@@ -42,29 +41,32 @@ const RemovePlagiarism = () =>
 
     </div>;
 
-const DetectPlagiarism = () =>
-    <div className="card about mb-5 text-center mx-auto">
-        <h1>$5/per page</h1>
-        <p style={{ fontSize: "1rem", padding: "1em" }}>
-            Error Free <br />
-            Return in 2 Days <br />
-            Tasalli Bakhsh
-        </p>
 
-        <button className="cta">
-            <span className="span">Detect</span>
-            <span className="second">
-                <svg width="35px" height="20px" viewBox="0 0 66 43">
-                    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <path className="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-                        <path className="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-                        <path className="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
-                    </g>
-                </svg>
-            </span>
-        </button>
+const DetectPlagiarism = () => {
+    return (
+        <div className="card about mb-5 text-center mx-auto">
+            <h1>$5/per page</h1>
+            <p style={{ fontSize: "1rem", padding: "1em" }}>
+                Error Free <br />
+                Return in 2 Days <br />
+                Tasalli Bakhsh
+            </p>
 
-    </div>;
+            <button className="cta">
+                <span className="span">Detect</span>
+                <span className="second">
+                    <svg width="35px" height="20px" viewBox="0 0 66 43">
+                        <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <path className="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                            <path className="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                            <path className="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
+                </span>
+            </button>
+
+        </div>);
+}
 
 
 
@@ -125,90 +127,114 @@ function LandingPageFinal() {
         }
     }
 
-    //----------TOGGLE SWITCHES ------------
-
-    const AntSwitch = styled(Switch)(({ theme }) => ({
-        width: 52,
-        height: 30,
-        padding: 7,
-        display: 'flex',
-        '&:active': {
-            '& .MuiSwitch-thumb': {
-                width: 20,
-            },
-            '& .MuiSwitch-switchBase.Mui-checked': {
-                transform: 'translateX(25px)',
-            },
-        },
-        '& .MuiSwitch-switchBase': {
-            padding: 2,
-            '&.Mui-checked': {
-                transform: 'translateX(25px)',
-                color: '#fff',
-                '& + .MuiSwitch-track': {
-                    opacity: 1,
-                    backgroundColor: theme.palette.mode === 'dark' ? '#177ddc' : '#1890ff',
-                },
-            },
-        },
-        '& .MuiSwitch-thumb': {
-            boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
-            width: 24,
-            height: 24,
-            borderRadius: 16,
-            transition: theme.transitions.create(['width'], {
-                duration: 200,
-            }),
-        },
-        '& .MuiSwitch-track': {
-            borderRadius: 16,
-            opacity: 1,
-            backgroundColor: theme.palette.mode === 'dark' ? '#6d81fe' : '#ffd800',
-            boxSizing: 'border-box',
-        },
-    }));
-
-
+    
     const uploader = new Uploader({
         apiKey: "free"
     });
 
-    let priceHome = "p-2 fw-bold";
-
     const [priceMode, setPriceMode] =  useState(0);
+    const [pill, setPill] = useState(0);
 
     return (
         <>
-        <NavbarLandingPage/>
-            <div className="container-fluid">
-                <Navbar collapseOnSelect expand="lg" bg="white" variant="dark" className='navbar'>
-                    <Container>
-                        <Navbar.Brand href="#home" className='nav-logo text-dark'>turnitin<strong>PRO</strong></Navbar.Brand>
-                        <Navbar.Toggle aria-controls="responsive-navbar-nav" bg='dark' variant='dark' />
-                        <Navbar.Collapse id="responsive-navbar-nav" className=''>
-                            <div className="col-lg-7"></div>
-                            <Nav className='navbar-sign-btns'>
-                                <Nav.Link href="#deets" className='btn btn-primary  mx-2 nav-btns text-light px-3 fw-semibold'>Log In</Nav.Link>
-                                <Nav.Link eventKey={2} href="#memes" className='btn mx-2 nav-btns btn-light text-dark fw-bold px-5'
-                                    style={{ backgroundColor: "white" }}
-                                >Sign Up</Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-            </div>
+        {/* <NavbarLandingPage/> */}
+            <div className="mt-5">.</div>
+
+            <div className="container-fluid mainBackgroundImage">
+
+                <div className="row mt-5">
+                
+                    <div className="col-lg-12 d-flex justify-content-center flex-column">
+                        <div className="row tracking-in-expand">
+                            <h4 className='text-center fw-semibold'><span className='span'>Plagiarism</span> Company</h4>
+                        </div>
+                        <div className="row text-center">
+                            <h1 className='fw-bold'>Get an Exclusive</h1>
+                        </div>
+                        
+                        <svg width="auto" height="15%">
+                            <text x="50%" y="60%" text-anchor="middle"  >
+                                Plagiarism Removal
+                            </text>
+                        </svg>
+
+                        <h1 className='fw-bold text-center'>by a qualified writer pursuant!</h1>
 
 
-            <div className="container-fluid">
-                <div className="row ">
-                    <div className="col-lg-8 d-flex flex-column px-5">
+                        <div className="row text-center">
+                            <p className='h5 text-muted'>Get professional help from our qualified writers in your coursework and research papers</p>
+                        </div>
+                        <div className="row text-center mt-5" style={{color : "rgba(31,31,31,0.9)"}}>
+                            <h3 className='fw-semibold'>Upload a file to get started: </h3>
+                        </div>
+<br />
+                            <div className="row text-center mx-auto w-50">
+                            <div className={pill === 1 ? "col-lg-8 btn btn-outline-primary px-3 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-3 py-3 fw-bold mx-auto rounded-5"}
+                                onClick={() => setPill(1)}
+                                style={pill === 1 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
+                                    Remove Plagiarism
+                                </div>
+
+                            <div className={pill === 2 ? "col-lg-8 btn btn-outline-primary px-3 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-3 py-3 fw-bold mx-auto rounded-5"}
+                            onClick={()=>setPill(2)}
+                                style={pill === 2 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
+                                Detect Plagiarism
+                                </div>
+                            </div>
+                <div className="row mt-3 d-flex justify-content-center flex-wrap">
+                            <UploadDropzone uploader={uploader}
+                                options={{ multi: true }}
+                                onComplete={files => console.log(files)}
+                                width="50%"
+                                height="200px"
+                            />
+                </div>
+
+                <div className="row banner border-primary px-5 py-4">
+                    <div className="col-lg-8">
+                        <h2 className='h1'
+                        style={{fontFamily: "Arvo, serif", color: "#F1FFFF"}}>
+                            Starting from $1
+                        </h2>
+                        <p className='text-light h5'>Get certified professional's opinions at an extremely low price!</p>
+                    </div>
+                    <div className="col-lg-4">
+                        {/* <button className='btn btn-outline-light p-3'>order now</button>
+                        <button className='btn btn-outline-light p-3'>order now</button> */}
+                                <button class="learn-more"> Learn More
+                                </button>
+                    </div>
+                </div>
+
+
+
+{/*                         
                         <div className="row px-4 tracking-in-expand">
                             <h1 className='header fw-bold'>
                                 Detect and Remove <span style={{ fontSize: "3rem", color: "rgb(5,100,225)" }}>Plagiarism.</span>
                             </h1>
                         </div>
 
-                        <div className="row px-4 tracking-in-contract-bck-top">
+                        <div className="container-fluid backgorundBody justify-content-around">
+                            <div className="row text-center">
+                                <div className="col-lg-4">
+                                    <div className={temp === 1 ? "btn btn-outline-primary px-5 py-3 fw-bold" : "btn btn-outline-primary px-3 py-3 fw-bold"}
+                                        onClick={() => setTemp(1)}
+                                        style={temp === 1 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
+                                        Remove Plagiarism
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-4">
+                                    <div className={temp === 2 ? "btn btn-outline-primary px-5 py-3 fw-bold" : "btn btn-outline-primary px-3 py-3 fw-bold"}
+                                        onClick={() => setTemp(2)}
+                                        style={temp === 2 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}
+                                    >Detect Plagiarism</div>
+                                </div>
+                            </div>
+                        </div> */}
+
+                        {/* <div className="row px-4 tracking-in-contract-bck-top">
                             <p className='description tracking-in-contract-bck'>
                                 A website that offers a "research paper paraphrasing and plagiarism checker" service allows users to check their written work for plagiarism and reword text to avoid duplication.
                             </p>
@@ -244,13 +270,13 @@ function LandingPageFinal() {
                                 width="auto"
                                 height="250px"
                             />
-                        </div>
+                        </div> */}
 
                     </div>
 
-                    <div className="col-lg-4 professor d-flex align-items-center justify-content-center flex-column">
+                    {/* <div className="col-lg-4 professor d-flex align-items-center justify-content-center flex-column">
                         <img src={proff} alt="" className="img-fluid" />
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* ------------- FEATURES ------------------ */}
@@ -574,8 +600,8 @@ function LandingPageFinal() {
                     <div className="col-lg-12 d-flex flex-column justify-content-center">
                         <div className='Pricing-Slider'>
                             <nav className='price-nav mb-5'>
-                                <Button variant="light" className={priceMode === 0 ? "p-2 fw-bold price-homeActive": "p-2 fw-bold price-home"} onClick={()=> {setPriceMode(0)}}>Remove Plagiarism</Button>
-                                <Button variant="light" className={priceMode === 1 ? "p-2 fw-bold price-homeActive": "p-2 fw-bold price-home"} onClick={()=> {setPriceMode(1)}}>Detect Plagiarism</Button>
+                                <Button variant="light" className={priceMode === 0 ? "p-2 fw-bold insidePrice price-homeActive": "p-2 fw-bold insidePrice price-home"} onClick={()=> {setPriceMode(0)}}>Remove Plagiarism</Button>
+                                <Button variant="light" className={priceMode === 1 ? "p-2 fw-bold insidePrice price-homeActive": "p-2 fw-bold insidePrice price-home"} onClick={()=> {setPriceMode(1)}}>Detect Plagiarism</Button>
 
                                 
                             </nav>
@@ -592,8 +618,6 @@ function LandingPageFinal() {
                     </div>
                 </div>
             </div>
-
-
 
 
             <div className="container-fluid ">

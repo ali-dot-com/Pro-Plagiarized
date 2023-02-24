@@ -1,3 +1,103 @@
+.mainBackgroundImage{
+    /* background-image: url('../assets/blob-scene-haikei.svg'); */
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.tracking-in-expand > h4 > .span{
+    color: black;
+}
+.tracking-in-expand > h4{
+    font-weight: bold;
+    color: rgb(255, 170, 0);
+}
+
+svg text {
+    font-family: Arvo, serif;
+    letter-spacing: 5px;
+    stroke: #2dbad2;
+    font-size: 4.5rem;
+    font-weight: 600;
+    stroke-width: 0.5;
+    animation: textAnimate 5s infinite alternate;
+}
+
+.banner{
+    background: #1e9cb3;
+}
+.banner > div > h2{
+    letter-spacing: 3px;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+button.learn-more {
+    font-weight: 600;
+    color: #382b22;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #ffe250;
+    border: 2px solid #ffab00;
+    border-radius: 0.75em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffd500;
+    border-radius: inherit;
+    -webkit-box-shadow: 0 0 0 2px #ffab00, 0 0.625em 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #ffab00, 0 0.625em 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0.75em, -1em);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.learn-more:hover {
+    background: #ffe9e9;
+    -webkit-transform: translate(0, 0.25em);
+    transform: translate(0, 0.25em);
+}
+
+button.learn-more:hover::before {
+    -webkit-box-shadow: 0 0 0 2px #ffab00, 0 0.5em 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #ffab00, 0 0.5em 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0.5em, -1em);
+    transform: translate3d(0, 0.5em, -1em);
+}
+
+button.learn-more:active {
+    background: #ffe9e9;
+    -webkit-transform: translate(0em, 0.75em);
+    transform: translate(0em, 0.75em);
+}
+
+button.learn-more:active::before {
+    -webkit-box-shadow: 0 0 0 2px #ffab00, 0 0 #ffe3e2;
+    box-shadow: 0 0 0 2px #ffab00, 0 0 #ffe3e2;
+    -webkit-transform: translate3d(0, 0, -1em);
+    transform: translate3d(0, 0, -1em);
+}
+
+
+
 .navbar {
     box-shadow: none;
 }
@@ -95,7 +195,7 @@
     height: auto;
     display: grid;
     grid: auto / auto-flow;
-    padding: 3px;
+    padding: 5px;
     margin-bottom: 16px;
     background: #eee;
     border-radius: 12px;
@@ -108,11 +208,20 @@
     font-weight: 600;
 }
 
+.insidePrice{
+    border: 20px;
+}
+
 .price-homeActive {
+    transition: .2s;
+    z-index: 20;
+    width: 120%;
+    outline: 0;
+    border: 0;
     background: rgba(11, 95, 215, 0.8);
     color: white;
     font-weight: 600;
-    border-radius: 10px;
+    /* border-radius: 20px; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -368,6 +477,22 @@ button:hover .button-text {
         opacity: 1;
     }
 }
+
+@keyframes textAnimate {
+    0% {
+        stroke-dasharray: 0 70%;
+        stroke-dashoffset: 20%;
+        fill: hsl(189, 56%, 56%)
+    }
+
+    100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: rgba(255, 255, 255, 0.6)
+    }
+
+}
+
 
 @keyframes tracking-in-expand {
     0% {
@@ -654,6 +779,9 @@ button:hover .button-text {
         width: 200px;
         height: 300px;
     }
+    svg{
+        display: none;
+    }
 }
 
 @media only screen and (width < 1010px) {
@@ -669,7 +797,7 @@ button:hover .button-text {
     }
 }
 
-@media only screen and (width < 400px) or (width > 1300px) {
+@media only screen and (width > 400px) or (width < 1300px) {
 
     .cta {
         padding: 6px 20px;
@@ -734,7 +862,23 @@ button:hover .button-text {
         margin: 2em 0 0 0 ;
     }
 
+        svg text{
+            font-size: 3rem;
+        }
+}
 
+@media only screen and (width < 700px){
+        svg text {
+                font-size: 2rem;
+                margin: auto;
+            }
+}
+
+@media only screen and (width < 500px){
+    svg text{
+        font-size: 1.5rem;
+        margin: auto;
+    }
 }
 
 

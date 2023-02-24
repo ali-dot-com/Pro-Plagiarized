@@ -1,12 +1,33 @@
 .navbarlinks{
+    transition: .3s;
     font-weight: bold;
     color: black;
 }
 
 .navbarlinks:hover{
-    color: black;
-    border-bottom: 2px solid !important; 
-    font-size: 1.2rem;
+    /* color: black; */
+    border-bottom: 1px solid rgb(95,100,215) !important; 
+    transform: scale(1.1);
     border-color: white;
+    outline: 0;
+    border: 0;
 }
 
+.nav-btns:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}
+
+.mainNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* 
+.nav-right-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    border: 1px solid red;
+} */
