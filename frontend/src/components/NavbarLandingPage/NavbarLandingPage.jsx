@@ -1,7 +1,6 @@
 import "./navbarlandingpage.css";
 import React from "react";
 import { Link } from "react-router-dom";
-/*React-Bootstrap Libs for NavBar*/
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -24,7 +23,7 @@ const NavbarLandingPage = () => {
             <Nav.Link className="fw-bold text-dark nav-link-item px-3" href="#pricing">Feature</Nav.Link>
             <Nav.Link className="fw-bold text-dark nav-link-item px-3" href="#pricing">How we work?</Nav.Link>
 
-              <NavDropdown title="About Us" className="text-dark fw-bold" id="collasible-nav-dropdown">
+              <NavDropdown title="About Us" className="navDropdown fw-bold" id="collasible-nav-dropdown">
               <NavDropdown.Item className="fw-semibold text-primary text-fluid" href="#action/3.1">Guarantees</NavDropdown.Item>
               <NavDropdown.Item className="fw-semibold text-primary text-fluid" href="#action/3.2">FAQs</NavDropdown.Item>
               <NavDropdown.Item className="fw-semibold text-primary text-fluid" href="#action/3.3">Feedback</NavDropdown.Item>

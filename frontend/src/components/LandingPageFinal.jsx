@@ -1,95 +1,23 @@
 import './landingFinal.css'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import proff from "../assets/professor (Medium).jpg"
-import { styled } from '@mui/material/styles';
 import { Uploader } from "uploader";
 import { UploadDropzone } from "react-uploader";
 import {  useState } from 'react';
 import arrow from '../assets/down-arrow.svg'
-import { i1, i2, i3, i4, i5, i6, i7 } from './ImportingImages'
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
-import SlideRoutes from 'react-slide-routes';
+import { i1, i2, i3, i4, i5, i6, i7, i8 } from './ImportingImages'
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit';
 import FeaturesCard from './FeaturesCard';
 import Button from 'react-bootstrap/Button'
 import NavbarLandingPage from './NavbarLandingPage/NavbarLandingPage';
 
-const RemovePlagiarism = () =>
-    <div className="card home mb-5 text-center mx-auto">
-        <h1>$5/per page</h1>
-        <p style={{ fontSize: "1rem", padding: "1em" }}>
-            Error Free <br />
-            Return in 2 Days <br />
-            Tasalli Bakhsh
-        </p>
-
-
-        <button className="cta">
-            <span className="span">Remove</span>
-            <span className="second">
-                <svg width="35px" height="20px" viewBox="0 0 66 43">
-                    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <path className="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-                        <path className="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-                        <path className="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
-                    </g>
-                </svg>
-            </span>
-        </button>
-
-    </div>;
-
-
-const DetectPlagiarism = () => {
-    return (
-        <div className="card about mb-5 text-center mx-auto">
-            <h1>$5/per page</h1>
-            <p style={{ fontSize: "1rem", padding: "1em" }}>
-                Error Free <br />
-                Return in 2 Days <br />
-                Tasalli Bakhsh
-            </p>
-
-            <button className="cta">
-                <span className="span">Detect</span>
-                <span className="second">
-                    <svg width="35px" height="20px" viewBox="0 0 66 43">
-                        <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <path className="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-                            <path className="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
-                            <path className="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
-                        </g>
-                    </svg>
-                </span>
-            </button>
-
-        </div>);
-}
-
 
 
 function LandingPageFinal() {
-    const handleClick = () => {
-        let x = document.getElementById('d-plagiarism');
-        let y = document.getElementById('r-plagiarism');
-        x.style.backgroundColor = "rgb(11,95,215)"
-        x.style.color = "white";
-        y.style.backgroundColor = "white"
-        y.style.color = "rgb(11,95,215)";
-    }
-    const handleClickR = () => {
-        let x = document.getElementById('d-plagiarism');
-        let y = document.getElementById('r-plagiarism');
-        y.style.backgroundColor = "rgb(11,95,215)"
-        y.style.color = "white";
-        x.style.backgroundColor = "white"
-        x.style.color = "rgb(11,95,215)";
-    }
 
     const [text, setText] = useState("This is where different features are displayed!");
     const [header, setHeader] = useState("Features");
+    const [priceMode, setPriceMode] = useState(0);
+    const [pill, setPill] = useState(0);
+    const [active, setActive] = useState(0);
 
     const headArray = ["Qualified Writer", "Highest Grade Guaranteed", "All Day, Everyday Service",
         "Fastest Report Time", "Quality Assured", "Error Free Results"]
@@ -127,22 +55,77 @@ function LandingPageFinal() {
         }
     }
 
+    const DefaultPricing = () =>
+        <div className='container-fluid'>
+            <div className="row d-flex justify-content-center">
+                <div className="col-lg-6 text-center">
+                    <div className="defaultCard">
+                        <h2 className='text-center'>Get the best budget friendly pricing plans for our exclusive features</h2>
+                        <h4 className='text-center text-muted mt-4'>Starting from as low as $ 0.1</h4>
+                    </div>
+                </div>
+            </div>
+        </div>;
+
+
+    const RemovePlagiarism = () =>
+        <div className={priceMode === 1 ? "card home mb-3 text-center mx-auto bounce-in-left" : "card home mb-3 text-center mx-auto"}>
+            <h1>$5/per page</h1>
+            <p style={{ fontSize: "1rem", padding: "1em" }}>
+                Error Free <br />
+                Return in 2 Days <br />
+                Tasalli Bakhsh
+            </p>
+
+            <button className='price-button'>
+                <span>Remove</span>
+            </button>
+
+
+        </div>;
+
+
+    const DetectPlagiarism = () => {
+        return (
+            <div className={priceMode === 2 ? "card home mb-3 text-center mx-auto bounce-in-right" : "card home mb-3 text-center mx-auto"}>
+                <h1>$5/per page</h1>
+                <p style={{ fontSize: "1rem", padding: "1em" }}>
+                    Error Free <br />
+                    Return in 2 Days <br />
+                    Tasalli Bakhsh
+                </p>
+
+                <button className='price-button'>
+                    <span>Detect</span>
+                </button>
+            </div>);
+    }
+
+    const pricing = () => {
+        if (priceMode === 0){
+            return <DefaultPricing/>
+        }
+        else if (priceMode === 1 ){
+            return <RemovePlagiarism />
+
+        }
+        else {
+            return <DetectPlagiarism />
+
+        }
+    }
     
     const uploader = new Uploader({
         apiKey: "free"
     });
 
-    const [priceMode, setPriceMode] =  useState(0);
-    const [pill, setPill] = useState(0);
 
     return (
         <>
         <NavbarLandingPage />
 
             <div className="container-fluid mt-2 mainBackgroundImage">
-
                 <div className="row">
-                
                     <div className="col-lg-12 d-flex justify-content-center flex-column">
                         <div className="row tracking-in-expand">
                             <h4 className='text-center fw-semibold'><span className='span'>Plagiarism</span> Company</h4>
@@ -167,7 +150,7 @@ function LandingPageFinal() {
                             <h3 className='fw-semibold'>Upload a file to get started: </h3>
                         </div>
 <br />
-                            <div className="row text-center mx-auto w-50">
+                        <div className="row mt-3 text-center mx-auto w-50">
                             <div className={pill === 1 ? "col-lg-8 btn btn-outline-primary px-3 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-3 py-3 fw-bold mx-auto rounded-5"}
                                 onClick={() => setPill(1)}
                                 style={pill === 1 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
@@ -179,7 +162,7 @@ function LandingPageFinal() {
                                 style={pill === 2 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
                                 Detect Plagiarism
                                 </div>
-                            </div>
+                        </div>
                 <div className="row mt-3 d-flex justify-content-center flex-wrap">
                             <UploadDropzone uploader={uploader}
                                 options={{ multi: true }}
@@ -202,7 +185,6 @@ function LandingPageFinal() {
                         <button class="learn-more">Order Now</button>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -277,11 +259,11 @@ function LandingPageFinal() {
                 </div>
 
                     <div className="container-fluid">
-                        <div className="row ">
+                        <div className="row mt-4">
                             <div className="col-lg-12 py-2 mt-2 d-flex flex-column justify-content-center align-items-center">
-                                <a href="#" className='arrow d-flex flex-column'>
+                                <a href="#" className='arrow d-flex flex-column mt-1'>
                                     <img src={arrow} alt="" className='img-fluid' />
-                                    <span className='text-center mb-4 my-3 text-dark'>Get Started</span>
+                                    <h6 className='text-center mb-4 mt-3 fw-bold text-dark'>Get Started</h6>
                                 </a>
                             </div>
                         </div>
@@ -296,18 +278,96 @@ function LandingPageFinal() {
 
             <div className="container-fluid">
 
-                <div className="text-fluid">
-                    <h1 className='text-center text-fluid my-3 mb-5 fw-bold' style={{ fontSize: "3.5rem" }}>How we work?</h1>
+                <div className="row">
+                    <h1 className='text-center text-fluid my-3 mb-3 fw-bold' style={{ fontSize: "3.5rem" }}>Wondering how we work?</h1>
                 </div>
 
-                <div className="row reveal fade-bottom">
+                <div className="row mt-4 p-5">
 
-                    <div className="col-lg-4 stepOne d-flex justify-content-center flex-row align-items-center">
+                    <img src={i8} className='stepOneArrow img-fluid' alt="" />
+                    <div className="col-lg-4 my-auto workCard h-50">
+                        <div className="step-one p-3">
+                            <h3 className='f text-fluid'>Step One</h3>
+                            <h4 className='fw-bold mt-3 text-fluid'>Upload</h4>
+                            <hr />
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                        </div>
+                    </div>
+
+
+                    <div className="col-lg-4 p-4">
+                            
+                            <div className="step-one p-3 workCard h-50 my-2">
+                                <h3 className='f text-fluid'>Step Two</h3>
+                                <h4 className='fw-bold mt-3 text-fluid'>Wait</h4>
+                                <hr />
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                            </div>
+                        
+                        <img src={i8} className='stepTwoThreeArrow img-fluid' alt="" />
+
+
+                            <br />
+
+                            <div className="step-one p-3 workCard my-2 h-50">
+                                <h3 className='f text-fluid'>Step Four</h3>
+                                <h4 className='fw-bold mt-3 text-fluid'>Cancel</h4>
+                                <hr />
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                            </div>
+                    </div>
+                    
+                
+                    <div className="col-lg-4 my-auto workCard h-50">
+                        <div className="step-one p-3">
+                            <h3 className='text-fluid'>Step Three</h3>
+                            <h4 className='fw-bold mt-3 text-fluid'>Wait more</h4>
+                            <hr />
+                            <p className='text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    {/* <div className="col-lg-4 stepOne d-flex justify-content-center flex-row align-items-center">
                         <div class="stepCard mt-5">
                             <div class="pricing-block-content">
-                                <p class="pricing-plan text-fluid">Step one</p>
+                                <p class="pricing-plan h3 text-fluid">Step one</p>
                                 <div class="price-value" data-currency="$ USD" data-currency-simple="USD">
-                                    <p class="price-number text-fluid"><span class="price-integer">Upload</span></p>
+                                    <p class="price-number h3 text-fluid"><span class="price-integer">Upload</span></p>
                                 </div>
                                 <div class="pricing-note">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -347,8 +407,6 @@ function LandingPageFinal() {
                                 </div>
 
                             </div>
-
-
                         </div>
 
 
@@ -368,22 +426,22 @@ function LandingPageFinal() {
 
                             </div>
                         </div>
+                    </div> */}
+
+                    <div className="row mt-5">
+                        <button class="get-services mx-auto mt-5">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Get Services</span>
+                        </button>
                     </div>
 
-                    {/* <button className='text-center orderNow2 mt-5'>
-                        Order Now
-                    </button> */}
-
-                    <button class="get-services mx-auto mt-5">
-                        <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Get Services</span>
-                    </button>
                 </div>
             </div>
 
             <br /><br />
+
 
 
             {/* ------------- SAMPLES ----------- */}
@@ -391,44 +449,42 @@ function LandingPageFinal() {
 
 
 
-
             {/* ---------- TESTIMONIALS ------------ */}
-
 
             <div className="container-fluid my-3 mb-5 testimonial p-5">
                 <div className="row">
-                    <h1 className='text-center'>Check what our customers are saying</h1>
-                    <p className='text-center'>Check out our latest reviews so you can rely on our amazing features list</p>
+                    <h1 className='text-center text-white'>Check what our customers are saying</h1>
+                    <p className='text-center  text-white'>Check out our latest reviews so you can rely on our amazing features list</p>
                 </div>
 
                     <div className="row px-5 mt-2 d-flex flex-row justify-content-between">
 
                         <div className="col-lg-3 Usercard">
-                        <h4 className='fw-bold text-center pt-3 text-primary'>Mindblowing Service</h4>
-                            <p className='px-4 pt-2 text-center'>
-                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
-                            </p>
-                            <div className="userimg py-3 text-center justify-content-center">
-                                <img className='img-fluid px-2' src={i3} alt="user" />
-                                <i className='fw-bold'> - John Wick</i>
-                                
-                            </div>
+                            <h4 className='fw-bold text-center pt-3 text-dark'>Mindblowing Service</h4>
+                                <p className='px-4 pt-2 text-center'>
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
+                                </p>
+                                <div className="userimg py-3 text-center justify-content-center">
+                                    <img className='img-fluid px-2' src={i3} alt="user" />
+                                    <i className='fw-bold'> - John Wick</i>
+                                    
+                                </div>
+                        </div>
+
+                    <div className="col-lg-3 Usercard">
+                        <h4 className='fw-bold text-center pt-3 text-dark'>Efficient Workflow</h4>
+                                <p className='px-4 pt-2 text-center'>
+                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
+                                </p>
+                                <div className="userimg py-3 text-center justify-content-center">
+                                    <img className='img-fluid px-2' src={i3} alt="user" />
+                                    <i className='fw-bold'> - John Wick</i>
+
+                                </div>
                         </div>
 
                         <div className="col-lg-3 Usercard">
-                        <h4 className='fw-bold text-center pt-3 text-primary'>Efficient Workflow</h4>
-                            <p className='px-4 pt-2 text-center'>
-                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
-                            </p>
-                            <div className="userimg py-3 text-center justify-content-center">
-                                <img className='img-fluid px-2' src={i3} alt="user" />
-                                <i className='fw-bold'> - John Wick</i>
-
-                            </div>
-                        </div>
-
-                        <div className="col-lg-3 Usercard">
-                            <h4 className='fw-bold text-center pt-3 text-primary'>Risk Free Service</h4>
+                        <h4 className='fw-bold text-center pt-3 text-dark'>Risk Free Service</h4>
                             <p className='px-4 pt-2 text-center'>
                                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
                             </p>
@@ -539,20 +595,25 @@ function LandingPageFinal() {
                 <div className="row h-auto">
                     <div className="col-lg-12 d-flex flex-column justify-content-center">
                         <div className='Pricing-Slider'>
-                            <nav className='price-nav mb-5'>
-                                <Button variant="light" className={priceMode === 0 ? "p-2 fw-bold insidePrice price-homeActive": "p-2 fw-bold insidePrice price-home"} onClick={()=> {setPriceMode(0)}}>Remove Plagiarism</Button>
-                                <Button variant="light" className={priceMode === 1 ? "p-2 fw-bold insidePrice price-homeActive": "p-2 fw-bold insidePrice price-home"} onClick={()=> {setPriceMode(1)}}>Detect Plagiarism</Button>
 
-                                
-                            </nav>
-                            {
-                                priceMode === 0 ? <RemovePlagiarism/> : <DetectPlagiarism/>
-                            }
+                            <div className="row mt-3 text-center mx-auto w-50">
+                                <div className={priceMode === 1 ? "col-lg-8 btn btn-outline-primary px-2 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-2 py-3 fw-bold mx-auto rounded-5"}
+                                    onClick={() => setPriceMode(1)}
+                                    style={priceMode === 1 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
+                                    Remove Plagiarism
+                                </div>
 
-                            {/*<SlideRoutes>
-                                <Route path="/" element={<RemovePlagiarism />} />
-                                <Route path="/pleg" element={<DetectPlagiarism />} />
-                            </SlideRoutes>*/}
+                                <div className={priceMode === 2 ? "col-lg-8 btn btn-outline-primary px-2 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-2 py-3 fw-bold mx-auto rounded-5"}
+                                    onClick={() => setPriceMode(2)}
+                                    style={priceMode === 2 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
+                                    Detect Plagiarism
+                                </div>
+                            </div>
+
+                            <div className="row mt-5 tracking-in-contract-bck">
+                                { pricing() }
+                            </div>
+
                         </div>
 
                     </div>
@@ -565,7 +626,7 @@ function LandingPageFinal() {
                     <div className="col-lg-12 text-center">
                         <h1 className='text-center fw-bold text-light'>We would love to hear from you</h1>
                         <h2 className="text-center text-light py-3">Join us today and get services from our professional experts</h2>
-                        <div className="btn btn-dark px-5">JOIN</div>
+                        <div className="btn btn-dark px-5 jello-horizontal">Get Quote Now</div>
                     </div>
                 </div>
             </div>
@@ -614,6 +675,9 @@ function LandingPageFinal() {
                                     Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
                                     consectetur adipisicing elit.
                                 </p>
+                                <p className='text-success fw-bold  '>ATTENTION!</p>
+                                <p>Using TurnitinPro writing service is legal and is not disallowed by university/college policies.
+                                If you want to know how to use a custom paper you get from us legally, then learn here.</p>
                             </MDBCol>
 
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>

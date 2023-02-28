@@ -1,3 +1,65 @@
+.price-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: none;
+}
+
+.price-button:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #F9C62F;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    right: 0;
+}
+
+.price-button:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+.price-button span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 15px 22px;
+    color: #fff;
+    font-size: .4em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.price-button:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}   
+
+
 .mainBackgroundImage{
     /* background-image: url('../assets/blob-scene-haikei.svg'); */
     height: auto;
@@ -15,12 +77,12 @@
 
 svg text {
     font-family: Arvo, serif;
-    letter-spacing: 5px;
-    stroke: #2dbad2;
+    letter-spacing: 4px;
+    stroke: #1f9fb6;
     font-size: 4.5rem;
     font-weight: 600;
     stroke-width: 0.5;
-    animation: textAnimate 5s infinite alternate;
+    animation: textAnimate 4.5s infinite alternate;
 }
 
 .banner{
@@ -130,10 +192,9 @@ button.learn-more:active::before {
 .features-card {
     width: 400px;
     height: 250px;
-    background: rgba(0, 105, 215, 0.8);
+    background: #1e9cb3;
     box-shadow: 1px 1px 10px #444444;
 }
-
 
 .professor {
     margin-bottom: 2.5em;
@@ -158,6 +219,26 @@ button.learn-more:active::before {
     box-shadow: .4rem .4rem #05060f;
     overflow: hidden;
 }
+.workCard{
+    background: #1e9cb3;
+    border: .5vmin solid #05060f;
+    box-shadow: .4rem .4rem #05060f;
+}
+.stepOneArrow{
+    position: absolute;
+    width: 80px;
+    height: 55px;
+    left: 27%;
+    top: 310%;
+}
+.stepTwoThreeArrow{
+    position: absolute;
+    width: 55px;
+    height: 80px;
+    left: 67%;
+    top: 310%;
+    transform: rotate(90deg);
+}
 
 .pricing-block-content {
     display: flex;
@@ -168,7 +249,7 @@ button.learn-more:active::before {
 
 .pricing-plan {
     color: #05060f;
-    font-size: 1.3rem;
+    /* font-size: 1.3rem; */
     line-height: 1.25;
     font-weight: 700;
 }
@@ -181,47 +262,6 @@ button.learn-more:active::before {
     font-weight: 700;
 }
 
-.pricing-note {
-    opacity: .9;
-}
-
-
-.price-nav {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 40%;
-    height: auto;
-    display: grid;
-    grid: auto / auto-flow;
-    padding: 5px;
-    margin-bottom: 16px;
-    background: #eee;
-    border-radius: 12px;
-}
-
-.price-home {
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.insidePrice{
-    border: 20px;
-}
-
-.price-homeActive {
-    transition: .2s;
-    z-index: 20;
-    width: 120%;
-    outline: 0;
-    border: 0;
-    background: rgba(11, 95, 215, 0.8);
-    color: white;
-    font-weight: 600;
-    /* border-radius: 20px; */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
 
 .card {
     display: flex;
@@ -233,84 +273,24 @@ button.learn-more:active::before {
     height: 7em;
     font-size: 44px;
     color: rgba(231, 231, 231, 1);
-    box-shadow: 10px 8px 28px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 28px rgba(0, 0, 0, 0.5);
+}
+
+.defaultCard{
+    padding: 1em;
+    color: #1e9cb3;
 }
 
 .home {
     background: rgba(231, 231, 231, 1);
-        color: rgba(31, 31, 31, 0.9);
-        border: 0;
+    color: rgba(31, 31, 31, 0.9);
+    border: 0;
 }
 
 .about {
     background: rgba(231, 231, 231, 1);
     color: rgba(31, 31, 31, 0.9);
     border: 0;
-}
-
-
-
-.cta {
-    display: flex;
-    padding: 8px 25px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    background: rgba(11, 95, 215, 0.8);
-    transition: .5s;
-    box-shadow: 6px 6px 10px rgba(17, 17, 17, 0.9);
-    border: none;
-}
-
-.cta:focus {
-    outline: none;
-}
-
-.cta:hover {
-    transition: 0.5s;
-    box-shadow: 5px 5px 0 #FBC638;
-}
-
-.cta .second {
-    transition: 0.5s;
-    margin-right: 0px;
-}
-
-.cta:hover .second {
-    transition: 0.5s;
-    margin-right: 20px;
-}
-
-
-.second {
-    width: 20px;
-    margin-left: 30px;
-    position: relative;
-    top: 12%;
-}
-
-.one {
-    transition: 0.4s;
-    transform: translateX(-60%);
-}
-
-.two {
-    transition: 0.5s;
-    transform: translateX(-30%);
-}
-
-.cta:hover .three {
-    animation: color_anim .7s infinite 0.2s;
-}
-
-.cta:hover .one {
-    transform: translateX(0%);
-    animation: color_anim .7s infinite 0.6s;
-}
-
-.cta:hover .two {
-    transform: translateX(0%);
-    animation: color_anim .7s infinite 0.4s;
 }
 
 .rotating{
@@ -435,16 +415,20 @@ button:hover .button-text {
 }
 
 .testimonial{
-    background: rgba(202, 202, 202, 0.9);
+    /* background: rgba(202, 202, 202, 0.9); */
+    background: #1e9cb3;
 }
 .Usercard{
     background: rgba(241, 241, 241, 1);
     border-radius: 10px;
-    box-shadow: 5px 5px 20px rgba(150, 150, 150, 0.7);
+    box-shadow: 5px 5px 15px rgba(39, 39, 39, 0.3);
+}
+.Usercard > h4{
+    color: #fac013;
 }
 
 .joinUsToday{
-    background: #769dff;
+    background: #1e9cb3;
 }
 
 
@@ -460,6 +444,136 @@ button:hover .button-text {
     animation: slide-in-bck-center 1.5s ease-in-out both;
 }
 
+.jello-horizontal {
+    -webkit-animation: jello-horizontal 1s ease-in-out;
+    animation: jello-horizontal 1s ease-in-out;
+}
+
+.bounce-in-left {
+    -webkit-animation: bounce-in-left 0.8s both;
+    animation: bounce-in-left 0.8s both;
+}
+
+
+@-webkit-keyframes bounce-in-left {
+    0% {
+        -webkit-transform: translateX(-600px);
+        transform: translateX(-600px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateX(-68px);
+        transform: translateX(-68px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateX(-28px);
+        transform: translateX(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes bounce-in-left {
+    0% {
+        -webkit-transform: translateX(-600px);
+        transform: translateX(-600px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateX(-68px);
+        transform: translateX(-68px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateX(-28px);
+        transform: translateX(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
 
 @-webkit-keyframes tracking-in-expand {
     0% {
@@ -480,7 +594,7 @@ button:hover .button-text {
     0% {
         stroke-dasharray: 0 70%;
         stroke-dashoffset: 20%;
-        fill: hsl(189, 56%, 56%)
+        fill: hsl(189, 55%, 47%)
     }
 
     100% {
@@ -536,18 +650,6 @@ button:hover .button-text {
     }
 }
 
-/* ----------------------------------------------
- * Generated by Animista on 2023-2-24 15:7:37
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation heartbeat
- * ----------------------------------------
- */
 @-webkit-keyframes heartbeat {
     from {
         -webkit-transform: scale(1);
@@ -733,6 +835,11 @@ button:hover .button-text {
     animation: tracking-in-contract-bck-top .2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
+.bounce-in-right {
+    -webkit-animation: bounce-in-right 0.8s both;
+    animation: bounce-in-right 0.8s both;
+}
+
 @-webkit-keyframes tracking-in-contract-bck-top {
     0% {
         letter-spacing: 1em;
@@ -810,6 +917,222 @@ button:hover .button-text {
 }
 
 
+@-webkit-keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-2-27 16:9:38
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation bounce-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-in-right {
+    0% {
+        -webkit-transform: translateX(600px);
+        transform: translateX(600px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateX(68px);
+        transform: translateX(68px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateX(32px);
+        transform: translateX(32px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes bounce-in-right {
+    0% {
+        -webkit-transform: translateX(600px);
+        transform: translateX(600px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        -webkit-transform: translateX(68px);
+        transform: translateX(68px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        -webkit-transform: translateX(32px);
+        transform: translateX(32px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ============ MEDIA QUERIES =========== */
@@ -876,53 +1199,14 @@ button:hover .button-text {
     .professor {
         margin-bottom: 4em;
     }
-
+    .Usercard{
+        margin-bottom: .5em;
+    }
 }
 
 @media only screen and (width > 2180px) {
     .description {
         font-size: 2rem;
-    }
-}
-
-@media only screen and (width > 400px) or (width < 1300px) {
-
-    .cta {
-        padding: 6px 20px;
-        font-size: 18px;
-    }
-
-    .cta:hover .three {
-        animation: color_anim 1s infinite 0.2s;
-    }
-
-    .cta:hover .one {
-        transform: translateX(0%);
-        animation: color_anim 1s infinite 0.6s;
-    }
-
-    .cta:hover .two {
-        transform: translateX(0%);
-        animation: color_anim 1s infinite 0.4s;
-    }
-
-    .cta:focus {
-        outline: none;
-    }
-
-    .cta:hover {
-        transition: 0.5s;
-        box-shadow: 6px 6px 0 #FBC638;
-    }
-
-    .cta .second {
-        transition: 0.5s;
-        margin-right: 0px;
-    }
-
-    .cta:hover .second {
-        transition: 0.5s;
-        margin-right: 45px;
     }
 }
 
