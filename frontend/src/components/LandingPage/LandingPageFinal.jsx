@@ -2,12 +2,12 @@ import './landingFinal.css'
 import { Uploader } from "uploader";
 import { UploadDropzone } from "react-uploader";
 import {  useState } from 'react';
-import arrow from '../assets/down-arrow.svg'
-import { i1, i2, i3, i4, i5, i6, i7, i8 } from './ImportingImages'
+import arrow from '../../assets/down-arrow.svg'
+import { i1, i2, i3, i4, i5, i6, i7, i8 } from '../ImportingImages'
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit';
 import FeaturesCard from './FeaturesCard';
 import Button from 'react-bootstrap/Button'
-import NavbarLandingPage from './NavbarLandingPage/NavbarLandingPage';
+import NavbarLandingPage from '../NavbarLandingPage/NavbarLandingPage';
 
 
 
