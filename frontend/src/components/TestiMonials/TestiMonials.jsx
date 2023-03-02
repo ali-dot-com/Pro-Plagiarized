@@ -10,28 +10,24 @@ const TestiMonials = () => {
   
     const testiMonials = [
         {
-            name: 'Rekob Ramya',
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
-            address: 'USA',
-            img: 'https://i.ibb.co/hgGJc8d/Gareth-Bale.jpg'
+            title: 'Analyse the potential benefits that can be achieved as well as the limiations',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem',
+            academicLevel: 'Nursery Prep'
         },
         {
-            name: 'Brandon Savage',
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
-            address: 'USA',
-            img: 'https://i.ibb.co/z7Kp6yr/np-file-33188.jpg'
+            title: 'Analyse the potential benefits that can be achieved as well as the limiations',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            academicLevel: 'Nursery Prep'
         },
         {
-            name: 'Steve Burns',
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
-            address: 'USA',
-            img: 'https://i.ibb.co/CP5sj7g/2856040-58866808-2560-1440.jpg'
+            title: 'Analyse the potential benefits that can be achieved as well as the limiations',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            academicLevel: 'Nursery Prep'
         },
         {
-            name: 'Kevin Canlas',
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.',
-            address: 'USA',
-            img: 'https://i.ibb.co/10SYccm/1552313010-354215-noticia-normal.jpg'
+            title: 'Analyse the potential benefits that can be achieved as well as the limiations',
+            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            academicLevel: 'Nursery Prep'
         },
     ]
     //Owl Carousel Settings
@@ -60,20 +56,20 @@ const TestiMonials = () => {
     return (
         <section id="testimonial" className="testimonials pt-70 pb-70">
             <div className="container mt-5">
-                <h4 className="miniTitle text-center">TESTIMONIALS</h4>
-                <div className="text-center ">
-                    <h3 className="sectionTitle">What Our Clients are Saying?</h3>
-                </div>
-                <p className="text-center ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 m-0">
+                        <h1 className='text-center fw-bold' style={{fontSize: "3rem"}}>Writing Services Samples</h1>
+                        <div className='px-5'>
+                            <h6 className='text-center px-5 mt-3'>Our work samples written by our qualified writers, will reflect our work
+                            quality and explain why students highly recommend essay company for quality writing services.</h6>
+                        </div>
+                        
                         <OwlCarousel id="customer-testimonoals" className="owl-carousel owl-theme" {...options}>
                             {
                                 testiMonials.length === 0 ?
                                     <div class="item">
                                         <div class="shadow-effect">
                                             <img class="img-circle" src={userPic} />
-
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                                         </div>
                                         <div class="testimonial-name">

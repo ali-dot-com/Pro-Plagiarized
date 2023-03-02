@@ -1,13 +1,14 @@
 import './landingFinal.css'
 import { Uploader } from "uploader";
 import { UploadDropzone } from "react-uploader";
-import {  useState } from 'react';
+import { useState } from 'react';
 import arrow from '../../assets/down-arrow.svg'
 import { i1, i2, i3, i4, i5, i6, i7, i8 } from '../ImportingImages'
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon} from 'mdb-react-ui-kit';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import FeaturesCard from './FeaturesCard';
 import Button from 'react-bootstrap/Button'
 import NavbarLandingPage from '../NavbarLandingPage/NavbarLandingPage';
+import TestiMonials from '../TestiMonials/TestiMonials'
 
 
 
@@ -15,7 +16,7 @@ function LandingPageFinal() {
 
     const [text, setText] = useState("This is where different features are displayed!");
     const [header, setHeader] = useState("Features");
-    const [priceMode, setPriceMode] = useState(0);
+    const [priceMode, setPriceMode] = useState(1);
     const [pill, setPill] = useState(0);
     const [active, setActive] = useState(0);
 
@@ -102,10 +103,10 @@ function LandingPageFinal() {
     }
 
     const pricing = () => {
-        if (priceMode === 0){
-            return <DefaultPricing/>
+        if (priceMode === 0) {
+            return <DefaultPricing />
         }
-        else if (priceMode === 1 ){
+        else if (priceMode === 1) {
             return <RemovePlagiarism />
 
         }
@@ -114,7 +115,7 @@ function LandingPageFinal() {
 
         }
     }
-    
+
     const uploader = new Uploader({
         apiKey: "free"
     });
@@ -122,7 +123,7 @@ function LandingPageFinal() {
 
     return (
         <>
-        <NavbarLandingPage />
+            <NavbarLandingPage />
 
             <div className="container-fluid mt-2 mainBackgroundImage">
                 <div className="row">
@@ -133,7 +134,7 @@ function LandingPageFinal() {
                         <div className="row text-center">
                             <h1 className='fw-bold'>Get an Exclusive</h1>
                         </div>
-                        
+
                         <svg width="auto" height="15%">
                             <text x="50%" y="60%" text-anchor="middle"  >
                                 Plagiarism Removal
@@ -142,51 +143,50 @@ function LandingPageFinal() {
 
                         <h1 className='fw-bold text-center'>by a qualified writer pursuant!</h1>
 
-
                         <div className="row text-center">
                             <p className='h5 text-muted'>Get professional help from our qualified writers in your coursework and research papers</p>
                         </div>
-                        <div className="row text-center mt-5" style={{color : "rgba(31,31,31,0.9)"}}>
+                        <div className="row text-center mt-5" style={{ color: "rgba(31,31,31,0.9)" }}>
                             <h3 className='fw-semibold'>Upload a file to get started: </h3>
                         </div>
-<br />
+                        <br />
                         <div className="row mt-3 text-center mx-auto w-50">
                             <div className={pill === 1 ? "col-lg-8 btn btn-outline-primary px-3 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-3 py-3 fw-bold mx-auto rounded-5"}
                                 onClick={() => setPill(1)}
                                 style={pill === 1 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
-                                    Remove Plagiarism
-                                </div>
+                                Remove Plagiarism
+                            </div>
 
                             <div className={pill === 2 ? "col-lg-8 btn btn-outline-primary px-3 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-3 py-3 fw-bold mx-auto rounded-5"}
-                            onClick={()=>setPill(2)}
+                                onClick={() => setPill(2)}
                                 style={pill === 2 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
                                 Detect Plagiarism
-                                </div>
+                            </div>
                         </div>
-                <div className="row mt-3 d-flex justify-content-center flex-wrap">
+                        <div className="row mt-3 d-flex justify-content-center flex-wrap">
                             <UploadDropzone uploader={uploader}
                                 options={{ multi: true }}
                                 onComplete={files => console.log(files)}
                                 width="50%"
                                 height="200px"
                             />
-                </div>
+                        </div>
 
-                <div className="row banner border-primary p-5">
-                    <div className="col-lg-8">
-                        <h2 className='h1'
-                        style={{fontFamily: "Arvo, serif", color: "#F1FFFF"}}>
-                            Starting from $1
-                        </h2>
-                        <p className='text-light h5'>Get certified professional's opinions at an extremely low price!</p>
-                    </div>
+                        <div className="row banner border-primary p-5">
+                            <div className="col-lg-8">
+                                <h2 className='h1'
+                                    style={{ fontFamily: "Arvo, serif", color: "#F1FFFF" }}>
+                                    Starting from $1
+                                </h2>
+                                <p className='text-light h5'>Get certified professional's opinions at an extremely low price!</p>
+                            </div>
 
-                    <div className="col-lg-4">
-                        <button class="learn-more">Order Now</button>
+                            <div className="col-lg-4">
+                                <button class="learn-more">Order Now</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
                 {/* ------------- FEATURES ------------------ */}
 
@@ -207,7 +207,7 @@ function LandingPageFinal() {
                                 </button>
 
                                 <button className="btn feature-items d-flex flex-row justify-content-center align-items-center"
-                                    onClick={() => {FeatureClick(2)}}>
+                                    onClick={() => { FeatureClick(2) }}>
                                     <img src={i7} alt="proff" className="img-fluid" />
                                     <h5 className='px-3'>Highest Grade</h5>
                                 </button>
@@ -254,9 +254,9 @@ function LandingPageFinal() {
                         </div>
                     </div>
 
-                <div className="col-lg-4 d-flex justify-content-center align-items-center">
-                    <FeaturesCard head={header} text={text} />
-                </div>
+                    <div className="col-lg-4 d-flex justify-content-center align-items-center">
+                        <FeaturesCard head={header} text={text} />
+                    </div>
 
                     <div className="container-fluid">
                         <div className="row mt-4">
@@ -273,49 +273,44 @@ function LandingPageFinal() {
             </div>
 
 
-
             {/* ------------ HOW IT WORKS ----------- */}
 
             <div className="container-fluid">
 
                 <div className="row">
-                    <h1 className='text-center text-fluid my-3 mb-3 fw-bold' style={{ fontSize: "3.5rem" }}>Wondering how we work?</h1>
+                    <h1 className='text-center text-fluid fw-bold' style={{ fontSize: "3rem" }}>Wondering how we work?</h1>
                 </div>
 
                 <div className="row px-5">
-
                     <div className="col-lg-4 my-auto workCard h-50">
                         <div className="step-one p-3">
                             <h3 className='f text-fluid'>Step One</h3>
                             <h4 className='fw-bold mt-3 text-fluid'>Upload</h4>
                             <hr />
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                            <p className='text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
                         </div>
                     </div>
 
-
                     <div className="col-lg-4 p-4">
-                            
-                            <div className="step-one p-3 workCard h-50 my-4">
-                                <h3 className='f text-fluid'>Step Two</h3>
-                                <h4 className='fw-bold mt-3 text-fluid'>Wait</h4>
-                                <hr />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
-                            </div>
+                        <div className="step-one p-3 workCard h-50 my-4">
+                            <h3 className='text-fluid'>Step Two</h3>
+                            <h4 className='fw-bold mt-3 text-fluid'>Wait</h4>
+                            <hr />
+                            <p className='text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                        </div>
 
                         <div className="arrowClass text-center">
                             <img class=" rotating img-fluid" height={"50"} width={"50"} alt="submission" src="https://www.essaycompany.com/assets_new/images/circular-arrows.webp"></img>
                         </div>
-                        
-                            <div className="step-one p-3 workCard my-4 h-50">
-                                <h3 className='f text-fluid'>Step Four</h3>
-                                <h4 className='fw-bold mt-3 text-fluid'>Cancel</h4>
-                                <hr />
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
-                            </div>
+
+                        <div className="step-one p-3 workCard my-4 h-50">
+                            <h3 className='f text-fluid'>Step Four</h3>
+                            <h4 className='fw-bold mt-3 text-fluid'>Cancel</h4>
+                            <hr />
+                            <p className='text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                        </div>
                     </div>
-                    
-                
+
                     <div className="col-lg-4 my-auto workCard h-50">
                         <div className="step-one p-3">
                             <h3 className='text-fluid'>Step Three</h3>
@@ -325,108 +320,7 @@ function LandingPageFinal() {
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    {/* <div className="col-lg-4 stepOne d-flex justify-content-center flex-row align-items-center">
-                        <div class="stepCard mt-5">
-                            <div class="pricing-block-content">
-                                <p class="pricing-plan h3 text-fluid">Step one</p>
-                                <div class="price-value" data-currency="$ USD" data-currency-simple="USD">
-                                    <p class="price-number h3 text-fluid"><span class="price-integer">Upload</span></p>
-                                </div>
-                                <div class="pricing-note">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 stepTwo d-flex flex-column flex-wrap align-content-center justify-content-center">
-                        <div class="stepCard mb-3">
-                            <div class="pricing-block-content">
-                                <p class="pricing-plan text-fluid">Step Two</p>
-                                <div class="price-value" data-currency="$ USD" data-currency-simple="USD">
-                                    <p class="price-number text-fluid"><span class="price-integer">Review</span></p>
-                                </div>
-                                <div class="pricing-note">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div className="arrowClass text-center m-auto my-4">
-                            <img class="imgArrows rotating img-fluid" height={"50"} width={"50"} loading="lazy" alt="submission" src="https://www.essaycompany.com/assets_new/images/circular-arrows.webp"></img>
-                        </div>
-
-
-                        <div class="stepCard mb-3">
-                            <div class="pricing-block-content">
-                                <p class="pricing-plan text-fluid">Step Two</p>
-                                <div class="price-value" data-currency="$ USD" data-currency-simple="USD">
-                                    <p class="price-number text-fluid"><span class="price-integer">Review</span></p>
-                                </div>
-                                <div class="pricing-note">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-
-
-                    <div className="col-lg-4 stepThree d-flex align-items-center">
-                        <div class="stepCard mt-5">
-                            <div class="pricing-block-content">
-                                <p class="pricing-plan text-fluid">Step Three</p>
-                                <div class="price-value" data-currency="$ USD" data-currency-simple="USD">
-                                    <p class="price-number text-fluid"><span class="price-integer">Report</span></p>
-                                </div>
-                                <div class="pricing-note text-fluid">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> */}
-
-                    <div className="row mt-5 pt-5">
+                    <div className="row mt-5 pt-4">
                         <button class="get-services mx-auto mt-5">
                             <span class="circle" aria-hidden="true">
                                 <span class="icon arrow"></span>
@@ -440,13 +334,10 @@ function LandingPageFinal() {
 
             <br />
 
-
-
             {/* ------------- SAMPLES ----------- */}
 
-
-
-
+            <TestiMonials />
+            
             {/* ---------- TESTIMONIALS ------------ */}
 
             <div className="container-fluid my-3 mb-5 testimonial p-5">
@@ -455,48 +346,82 @@ function LandingPageFinal() {
                     <p className='text-center  text-white'>Check out our latest reviews so you can rely on our amazing features list</p>
                 </div>
 
-                    <div className="row px-5 mt-2 d-flex flex-row justify-content-between">
+                <div className="row px-5 mt-2 d-flex flex-row justify-content-between">
 
-                        <div className="col-lg-3 Usercard">
-                            <h4 className='fw-bold text-center pt-3 text-dark'>Mindblowing Service</h4>
-                                <p className='px-4 pt-2 text-center'>
-                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
-                                </p>
-                                <div className="userimg py-3 text-center justify-content-center">
-                                    <img className='img-fluid px-2' src={i3} alt="user" />
-                                    <i className='fw-bold'> - John Wick</i>
-                                    
-                                </div>
+                    <div className="col-lg-3 Usercard">
+                        <h4 className='fw-bold text-center pt-3 text-dark'>Mindblowing Service</h4>
+                        <p className='px-4 pt-2 text-center'>
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
+                        </p>
+                        <div className="userimg py-3 text-center justify-content-center">
+                            <img className='img-fluid px-2' src={i3} alt="user" />
+                            <i className='fw-bold'> - John Wick</i>
                         </div>
+                    </div>
 
                     <div className="col-lg-3 Usercard">
                         <h4 className='fw-bold text-center pt-3 text-dark'>Efficient Workflow</h4>
-                                <p className='px-4 pt-2 text-center'>
-                                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
-                                </p>
-                                <div className="userimg py-3 text-center justify-content-center">
-                                    <img className='img-fluid px-2' src={i3} alt="user" />
-                                    <i className='fw-bold'> - John Wick</i>
+                        <p className='px-4 pt-2 text-center'>
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
+                        </p>
+                        <div className="userimg py-3 text-center justify-content-center">
+                            <img className='img-fluid px-2' src={i3} alt="user" />
+                            <i className='fw-bold'> - John Wick</i>
 
-                                </div>
                         </div>
+                    </div>
 
-                        <div className="col-lg-3 Usercard">
+                    <div className="col-lg-3 Usercard">
                         <h4 className='fw-bold text-center pt-3 text-dark'>Risk Free Service</h4>
-                            <p className='px-4 pt-2 text-center'>
-                                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
-                            </p>
-                            <div className="userimg py-3 text-center justify-content-center">
-                                <img className='img-fluid px-2' src={i3} alt="user" />
-                                <i className='fw-bold'> - John Wick</i>
+                        <p className='px-4 pt-2 text-center'>
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur aliquid voluptatibus saepe illo eos enim natus. Iusto, explicabo ullam."
+                        </p>
+                        <div className="userimg py-3 text-center justify-content-center">
+                            <img className='img-fluid px-2' src={i3} alt="user" />
+                            <i className='fw-bold'> - John Wick</i>
 
-                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
+            {/* --------- PRICING ----------- */}
+
+            <div className="container-fluid mb-5" id='pricing'>
+                <div className="row mt-4">
+                    <div className="col-md-12">
+                        <h1 style={{ color: "rgb(0,0,0)", fontSize: "3.5rem" }} className='text-center fw-bold'>Pricing</h1>
+                    </div>
+                </div>
+
+                <div className="row h-auto">
+                    <div className="col-lg-12 d-flex flex-column justify-content-center">
+                        <h6 className='text-center'>Check from one of the following</h6>
+                        <div className='Pricing-Slider'>
+
+                            <div className="row mt-3 text-center mx-auto w-50">
+                                <div className={priceMode === 1 ? "col-lg-8 btn btn-outline-primary px-2 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-2 py-3 fw-bold mx-auto rounded-5"}
+                                    onClick={() => setPriceMode(1)}
+                                    style={priceMode === 1 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
+                                    Remove Plagiarism
+                                </div>
+
+                                <div className={priceMode === 2 ? "col-lg-8 btn btn-outline-primary px-2 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-2 py-3 fw-bold mx-auto rounded-5"}
+                                    onClick={() => setPriceMode(2)}
+                                    style={priceMode === 2 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
+                                    Detect Plagiarism
+                                </div>
+                            </div>
+
+                            <div className="row mt-5 tracking-in-contract-bck">
+                                {pricing()}
+                            </div>
+
+                        </div>
 
                     </div>
+                </div>
             </div>
-                                
 
 
             {/* -------------- PRICE CALCULATOR --------------- */}
@@ -505,7 +430,7 @@ function LandingPageFinal() {
                 <div className="row text-center">
                     <h1 className='fw-bold'>Wanna know how much will you be paying?</h1>
                 </div>
-                
+
                 <div className="row g-3 calculator">
                     <div className="col-lg-12 d-flex flex-row">
 
@@ -539,7 +464,7 @@ function LandingPageFinal() {
                                 </select><br />
                             </form>
                         </div>
-                        
+
                         <div className="col-lg-4 my-3 py-5">
                             <form>
                                 <label className="form-label">Designation: </label>
@@ -561,7 +486,7 @@ function LandingPageFinal() {
                                     <option> &gt; 50000 words </option>
                                 </select><br />
                             </form>
-                        </div> 
+                        </div>
 
                         <div className="col-lg-4 priceResults p-5">
                             <h1 className='text-fluid'>Price Will Be:</h1>
@@ -569,55 +494,10 @@ function LandingPageFinal() {
                             <br /><br />
                             <a className='btn btn-primary p-3' href="#">Order Now</a>
                         </div>
-
                     </div>
                 </div>
 
             </div>
-
-
-
-
-
-
-            {/* --------- PRICING ----------- */}
-
-            <div className="container-fluid mb-5" id='pricing'
-            >
-                <div className="row my-4">
-                    <div className="col-md-12 d-flex justify-content-center ">
-                        <h1 style={{ color: "rgb(0,0,0)", fontSize: "3.5rem" }} className='fw-bold'>Pricing</h1>
-                    </div>
-                </div>
-
-                <div className="row h-auto">
-                    <div className="col-lg-12 d-flex flex-column justify-content-center">
-                        <div className='Pricing-Slider'>
-
-                            <div className="row mt-3 text-center mx-auto w-50">
-                                <div className={priceMode === 1 ? "col-lg-8 btn btn-outline-primary px-2 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-2 py-3 fw-bold mx-auto rounded-5"}
-                                    onClick={() => setPriceMode(1)}
-                                    style={priceMode === 1 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
-                                    Remove Plagiarism
-                                </div>
-
-                                <div className={priceMode === 2 ? "col-lg-8 btn btn-outline-primary px-2 py-3 fw-bold rounded-5" : "col-lg-4 btn btn-outline-primary px-2 py-3 fw-bold mx-auto rounded-5"}
-                                    onClick={() => setPriceMode(2)}
-                                    style={priceMode === 2 ? { backgroundColor: "rgb(12,100,215)", color: "white", transition: ".3s" } : { backgroundColor: "white", color: "rgb(12,100,215)", transition: ".3s" }}>
-                                    Detect Plagiarism
-                                </div>
-                            </div>
-
-                            <div className="row mt-5 tracking-in-contract-bck">
-                                { pricing() }
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
 
             <div className="container-fluid ">
                 <div className="row joinUsToday py-5">
@@ -631,7 +511,6 @@ function LandingPageFinal() {
 
 
             {/* ------------- FOOTER ---------------- */}
-
 
             <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
                 <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
@@ -675,7 +554,7 @@ function LandingPageFinal() {
                                 </p>
                                 <p className='text-success fw-bold  '>ATTENTION!</p>
                                 <p>Using TurnitinPro writing service is legal and is not disallowed by university/college policies.
-                                If you want to know how to use a custom paper you get from us legally, then learn here.</p>
+                                    If you want to know how to use a custom paper you get from us legally, then learn here.</p>
                             </MDBCol>
 
                             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
@@ -697,7 +576,7 @@ function LandingPageFinal() {
                                 </p>
 
                                 <p className=''>
-                                    <a href="" className = 'text-dark fw-bold' style={{textDecoration: "none"}}>Payment Methods: </a>
+                                    <a href="" className='text-dark fw-bold' style={{ textDecoration: "none" }}>Payment Methods: </a>
                                     <svg className='px-2' xmlns="http://www.w3.org/2000/svg" height={40} viewBox="0 0 576 512"><path d="M482.9 410.3c0 6.8-4.6 11.7-11.2 11.7-6.8 0-11.2-5.2-11.2-11.7 0-6.5 4.4-11.7 11.2-11.7 6.6 0 11.2 5.2 11.2 11.7zm-310.8-11.7c-7.1 0-11.2 5.2-11.2 11.7 0 6.5 4.1 11.7 11.2 11.7 6.5 0 10.9-4.9 10.9-11.7-.1-6.5-4.4-11.7-10.9-11.7zm117.5-.3c-5.4 0-8.7 3.5-9.5 8.7h19.1c-.9-5.7-4.4-8.7-9.6-8.7zm107.8.3c-6.8 0-10.9 5.2-10.9 11.7 0 6.5 4.1 11.7 10.9 11.7 6.8 0 11.2-4.9 11.2-11.7 0-6.5-4.4-11.7-11.2-11.7zm105.9 26.1c0 .3.3.5.3 1.1 0 .3-.3.5-.3 1.1-.3.3-.3.5-.5.8-.3.3-.5.5-1.1.5-.3.3-.5.3-1.1.3-.3 0-.5 0-1.1-.3-.3 0-.5-.3-.8-.5-.3-.3-.5-.5-.5-.8-.3-.5-.3-.8-.3-1.1 0-.5 0-.8.3-1.1 0-.5.3-.8.5-1.1.3-.3.5-.3.8-.5.5-.3.8-.3 1.1-.3.5 0 .8 0 1.1.3.5.3.8.3 1.1.5s.2.6.5 1.1zm-2.2 1.4c.5 0 .5-.3.8-.3.3-.3.3-.5.3-.8 0-.3 0-.5-.3-.8-.3 0-.5-.3-1.1-.3h-1.6v3.5h.8V426h.3l1.1 1.4h.8l-1.1-1.3zM576 81v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V81c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM64 220.6c0 76.5 62.1 138.5 138.5 138.5 27.2 0 53.9-8.2 76.5-23.1-72.9-59.3-72.4-171.2 0-230.5-22.6-15-49.3-23.1-76.5-23.1-76.4-.1-138.5 62-138.5 138.2zm224 108.8c70.5-55 70.2-162.2 0-217.5-70.2 55.3-70.5 162.6 0 217.5zm-142.3 76.3c0-8.7-5.7-14.4-14.7-14.7-4.6 0-9.5 1.4-12.8 6.5-2.4-4.1-6.5-6.5-12.2-6.5-3.8 0-7.6 1.4-10.6 5.4V392h-8.2v36.7h8.2c0-18.9-2.5-30.2 9-30.2 10.2 0 8.2 10.2 8.2 30.2h7.9c0-18.3-2.5-30.2 9-30.2 10.2 0 8.2 10 8.2 30.2h8.2v-23zm44.9-13.7h-7.9v4.4c-2.7-3.3-6.5-5.4-11.7-5.4-10.3 0-18.2 8.2-18.2 19.3 0 11.2 7.9 19.3 18.2 19.3 5.2 0 9-1.9 11.7-5.4v4.6h7.9V392zm40.5 25.6c0-15-22.9-8.2-22.9-15.2 0-5.7 11.9-4.8 18.5-1.1l3.3-6.5c-9.4-6.1-30.2-6-30.2 8.2 0 14.3 22.9 8.3 22.9 15 0 6.3-13.5 5.8-20.7.8l-3.5 6.3c11.2 7.6 32.6 6 32.6-7.5zm35.4 9.3l-2.2-6.8c-3.8 2.1-12.2 4.4-12.2-4.1v-16.6h13.1V392h-13.1v-11.2h-8.2V392h-7.6v7.3h7.6V416c0 17.6 17.3 14.4 22.6 10.9zm13.3-13.4h27.5c0-16.2-7.4-22.6-17.4-22.6-10.6 0-18.2 7.9-18.2 19.3 0 20.5 22.6 23.9 33.8 14.2l-3.8-6c-7.8 6.4-19.6 5.8-21.9-4.9zm59.1-21.5c-4.6-2-11.6-1.8-15.2 4.4V392h-8.2v36.7h8.2V408c0-11.6 9.5-10.1 12.8-8.4l2.4-7.6zm10.6 18.3c0-11.4 11.6-15.1 20.7-8.4l3.8-6.5c-11.6-9.1-32.7-4.1-32.7 15 0 19.8 22.4 23.8 32.7 15l-3.8-6.5c-9.2 6.5-20.7 2.6-20.7-8.6zm66.7-18.3H408v4.4c-8.3-11-29.9-4.8-29.9 13.9 0 19.2 22.4 24.7 29.9 13.9v4.6h8.2V392zm33.7 0c-2.4-1.2-11-2.9-15.2 4.4V392h-7.9v36.7h7.9V408c0-11 9-10.3 12.8-8.4l2.4-7.6zm40.3-14.9h-7.9v19.3c-8.2-10.9-29.9-5.1-29.9 13.9 0 19.4 22.5 24.6 29.9 13.9v4.6h7.9v-51.7zm7.6-75.1v4.6h.8V302h1.9v-.8h-4.6v.8h1.9zm6.6 123.8c0-.5 0-1.1-.3-1.6-.3-.3-.5-.8-.8-1.1-.3-.3-.8-.5-1.1-.8-.5 0-1.1-.3-1.6-.3-.3 0-.8.3-1.4.3-.5.3-.8.5-1.1.8-.5.3-.8.8-.8 1.1-.3.5-.3 1.1-.3 1.6 0 .3 0 .8.3 1.4 0 .3.3.8.8 1.1.3.3.5.5 1.1.8.5.3 1.1.3 1.4.3.5 0 1.1 0 1.6-.3.3-.3.8-.5 1.1-.8.3-.3.5-.8.8-1.1.3-.6.3-1.1.3-1.4zm3.2-124.7h-1.4l-1.6 3.5-1.6-3.5h-1.4v5.4h.8v-4.1l1.6 3.5h1.1l1.4-3.5v4.1h1.1v-5.4zm4.4-80.5c0-76.2-62.1-138.3-138.5-138.3-27.2 0-53.9 8.2-76.5 23.1 72.1 59.3 73.2 171.5 0 230.5 22.6 15 49.5 23.1 76.5 23.1 76.4.1 138.5-61.9 138.5-138.4z" /></svg>
                                     <svg className='px-1' xmlns="http://www.w3.org/2000/svg" height={40} viewBox="0 0 576 512"><path d="M470.1 231.3s7.6 37.2 9.3 45H446c3.3-8.9 16-43.5 16-43.5-.2.3 3.3-9.1 5.3-14.9l2.8 13.4zM576 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h480c26.5 0 48 21.5 48 48zM152.5 331.2L215.7 176h-42.5l-39.3 106-4.3-21.5-14-71.4c-2.3-9.9-9.4-12.7-18.2-13.1H32.7l-.7 3.1c15.8 4 29.9 9.8 42.2 17.1l35.8 135h42.5zm94.4.2L272.1 176h-40.2l-25.1 155.4h40.1zm139.9-50.8c.2-17.7-10.6-31.2-33.7-42.3-14.1-7.1-22.7-11.9-22.7-19.2.2-6.6 7.3-13.4 23.1-13.4 13.1-.3 22.7 2.8 29.9 5.9l3.6 1.7 5.5-33.6c-7.9-3.1-20.5-6.6-36-6.6-39.7 0-67.6 21.2-67.8 51.4-.3 22.3 20 34.7 35.2 42.2 15.5 7.6 20.8 12.6 20.8 19.3-.2 10.4-12.6 15.2-24.1 15.2-16 0-24.6-2.5-37.7-8.3l-5.3-2.5-5.6 34.9c9.4 4.3 26.8 8.1 44.8 8.3 42.2.1 69.7-20.8 70-53zM528 331.4L495.6 176h-31.1c-9.6 0-16.9 2.8-21 12.9l-59.7 142.5H426s6.9-19.2 8.4-23.3H486c1.2 5.5 4.8 23.3 4.8 23.3H528z" /></svg>
                                 </p>

@@ -57,20 +57,21 @@
     100% {
         transform: scale(1);
     }
-}   
+}
 
 
-.mainBackgroundImage{
+.mainBackgroundImage {
     /* background-image: url('../assets/blob-scene-haikei.svg'); */
     height: auto;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.tracking-in-expand > h4 > .span{
+.tracking-in-expand>h4>.span {
     color: black;
 }
-.tracking-in-expand > h4{
+
+.tracking-in-expand>h4 {
     font-weight: bold;
     color: rgb(255, 170, 0);
 }
@@ -85,10 +86,11 @@ svg text {
     animation: textAnimate 4.5s infinite alternate;
 }
 
-.banner{
+.banner {
     background: #1e9cb3;
 }
-.banner > div > h2{
+
+.banner>div>h2 {
     letter-spacing: 3px;
 }
 
@@ -165,7 +167,7 @@ button.learn-more:active::before {
     transform: translate3d(0, 0, -1em);
 }
 
-.header{
+.header {
     font-size: 2.6rem;
 }
 
@@ -174,21 +176,23 @@ button.learn-more:active::before {
     font-size: 3.5rem;
 }
 
-.feature-items{
+.feature-items {
     width: 80%;
     border-radius: 0;
     margin: 1em;
     padding: .5em;
     box-shadow: 0px 0px 12px rgba(163, 163, 163, 0.6);
 }
-.feature-items:focus{
+
+.feature-items:focus {
     background-color: #f7d324;
     color: black;
 }
 
-.feature-items > img{
+.feature-items>img {
     max-width: 20%;
 }
+
 .features-card {
     width: 400px;
     height: 250px;
@@ -219,12 +223,14 @@ button.learn-more:active::before {
     box-shadow: .4rem .4rem #05060f;
     overflow: hidden;
 }
-.workCard{
+
+.workCard {
     background: #1e9cb3;
     border: .5vmin solid #05060f;
     box-shadow: .4rem .4rem #05060f;
 }
-.stepOneArrow{
+
+.stepOneArrow {
     position: absolute;
     width: 80px;
     height: 55px;
@@ -269,7 +275,7 @@ button.learn-more:active::before {
     box-shadow: 5px 5px 28px rgba(0, 0, 0, 0.5);
 }
 
-.defaultCard{
+.defaultCard {
     padding: 1em;
     color: #1e9cb3;
 }
@@ -286,21 +292,21 @@ button.learn-more:active::before {
     border: 0;
 }
 
-.rotating{
+.rotating {
     animation: rotating 6s linear infinite;
 }
 
-.imgArrows{
+.imgArrows {
     /* vertical-align: middle; */
 }
 
-@keyframes rotating{
-    100%{
+@keyframes rotating {
+    100% {
         transform: rotate(360deg);
     }
 }
 
-.calculator{
+.calculator {
     color: white;
     font-weight: 600;
     background: rgba(31, 31, 31, .8);
@@ -309,7 +315,7 @@ button.learn-more:active::before {
 }
 
 
-.orderNow{
+.orderNow {
     text-decoration: none;
     padding: 1em;
     border-radius: 15px;
@@ -407,20 +413,22 @@ button:hover .button-text {
     color: #fff;
 }
 
-.testimonial{
+.testimonial {
     /* background: rgba(202, 202, 202, 0.9); */
     background: #1e9cb3;
 }
-.Usercard{
+
+.Usercard {
     background: rgba(241, 241, 241, 1);
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(39, 39, 39, 0.3);
 }
-.Usercard > h4{
+
+.Usercard>h4 {
     color: #fac013;
 }
 
-.joinUsToday{
+.joinUsToday {
     background: #1e9cb3;
 }
 
@@ -1138,9 +1146,7 @@ button:hover .button-text {
     }
 }
 
-@media only screen and (min-height: 800px) {
-    
-}
+@media only screen and (min-height: 800px) {}
 
 @media only screen and (min-width: 1900px) {
     .header {
@@ -1179,11 +1185,13 @@ button:hover .button-text {
     .features-header>h1 {
         font-size: 2.5rem;
     }
+
     .stepCard {
         width: 200px;
         height: 300px;
     }
-    svg{
+
+    svg {
         display: none;
     }
 }
@@ -1192,7 +1200,8 @@ button:hover .button-text {
     .professor {
         margin-bottom: 4em;
     }
-    .Usercard{
+
+    .Usercard {
         margin-bottom: .5em;
     }
 }
@@ -1207,57 +1216,45 @@ button:hover .button-text {
     .loader {
         display: none;
     }
-    .imgArrows{
+
+    .imgArrows {
         display: none;
     }
 
-    .header{
+    .header {
         font-size: 2rem;
     }
-    .header > span{
+
+    .header>span {
         font-size: 2.5rem;
     }
 
-    .stepOne > .stepCard, .stepTwo>.stepCard, .stepThree>.stepCard {
+    .stepOne>.stepCard,
+    .stepTwo>.stepCard,
+    .stepThree>.stepCard {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-content: space-evenly;
         align-items: space-evenly;
-        margin: 2em 0 0 0 ;
+        margin: 2em 0 0 0;
     }
 
-        svg text{
-            font-size: 3rem;
-        }
+    svg text {
+        font-size: 3rem;
+    }
 }
 
-@media only screen and (width < 700px){
-        svg text {
-                font-size: 2rem;
-                margin: auto;
-            }
-}
-
-@media only screen and (width < 500px){
-    svg text{
-        font-size: 1.5rem;
+@media only screen and (width < 700px) {
+    svg text {
+        font-size: 2rem;
         margin: auto;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (width < 500px) {
+    svg text {
+        font-size: 1.5rem;
+        margin: auto;
+    }
+}

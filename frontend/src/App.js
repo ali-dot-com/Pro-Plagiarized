@@ -19,9 +19,7 @@ function App() {
 		<Route path='/' element={<LandingFinal />} />
 		<Route path='aboutus' element={<Aboutus />} />
     <Route path='/signup' element={<Signup/>}/>
-
     <Route path='/temp' element={<TestiMonials/>}/>
-
 		</Routes> 
   )
 }
