@@ -1,10 +1,10 @@
 import './about.css'
-import analysis from '../assets/analysis.jpg'
-import individual from '../assets/for-individuals.jpg'
-import proff from '../assets/professor2.jpg'
-import search from '../assets/search.png'
-import fast from '../assets/fast.png'
-import custom from '../assets/custom.png'
+import analysis from '../../assets/analysis.jpg'
+import individual from '../../assets/for-individuals.jpg'
+import proff from '../../assets/professor2.jpg'
+import search from '../../assets/search.png'
+import fast from '../../assets/fast.png'
+import custom from '../../assets/custom.png'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
