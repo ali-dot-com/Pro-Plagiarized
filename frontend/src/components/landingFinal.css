@@ -231,14 +231,7 @@ button.learn-more:active::before {
     left: 27%;
     top: 310%;
 }
-.stepTwoThreeArrow{
-    position: absolute;
-    width: 55px;
-    height: 80px;
-    left: 67%;
-    top: 310%;
-    transform: rotate(90deg);
-}
+
 
 .pricing-block-content {
     display: flex;
@@ -298,7 +291,7 @@ button.learn-more:active::before {
 }
 
 .imgArrows{
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 
 @keyframes rotating{

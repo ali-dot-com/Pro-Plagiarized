@@ -282,9 +282,8 @@ function LandingPageFinal() {
                     <h1 className='text-center text-fluid my-3 mb-3 fw-bold' style={{ fontSize: "3.5rem" }}>Wondering how we work?</h1>
                 </div>
 
-                <div className="row mt-4 p-5">
+                <div className="row px-5">
 
-                    <img src={i8} className='stepOneArrow img-fluid' alt="" />
                     <div className="col-lg-4 my-auto workCard h-50">
                         <div className="step-one p-3">
                             <h3 className='f text-fluid'>Step One</h3>
@@ -297,19 +296,18 @@ function LandingPageFinal() {
 
                     <div className="col-lg-4 p-4">
                             
-                            <div className="step-one p-3 workCard h-50 my-2">
+                            <div className="step-one p-3 workCard h-50 my-4">
                                 <h3 className='f text-fluid'>Step Two</h3>
                                 <h4 className='fw-bold mt-3 text-fluid'>Wait</h4>
                                 <hr />
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
                             </div>
+
+                        <div className="arrowClass text-center">
+                            <img class=" rotating img-fluid" height={"50"} width={"50"} alt="submission" src="https://www.essaycompany.com/assets_new/images/circular-arrows.webp"></img>
+                        </div>
                         
-                        <img src={i8} className='stepTwoThreeArrow img-fluid' alt="" />
-
-
-                            <br />
-
-                            <div className="step-one p-3 workCard my-2 h-50">
+                            <div className="step-one p-3 workCard my-4 h-50">
                                 <h3 className='f text-fluid'>Step Four</h3>
                                 <h4 className='fw-bold mt-3 text-fluid'>Cancel</h4>
                                 <hr />
@@ -428,7 +426,7 @@ function LandingPageFinal() {
                         </div>
                     </div> */}
 
-                    <div className="row mt-5">
+                    <div className="row mt-5 pt-5">
                         <button class="get-services mx-auto mt-5">
                             <span class="circle" aria-hidden="true">
                                 <span class="icon arrow"></span>
@@ -440,7 +438,7 @@ function LandingPageFinal() {
                 </div>
             </div>
 
-            <br /><br />
+            <br />
 
 
 
