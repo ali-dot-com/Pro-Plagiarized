@@ -275,7 +275,7 @@ function Signup() {
   ];
 
   const onChange = (e) => {
-    if(e.target.name == "phone" )
+    if(e.target.name === "phone" )
     {
         const tempPhoneRegex = /^\+\d{1,4}[\d\s]+$/;
         if(!tempPhoneRegex.test(e.target.value))
@@ -287,8 +287,8 @@ function Signup() {
     setFormData((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
     });
-    if (e.target.name == "country") {
-      const country = countries.find((c) => c.code == e.target.value);
+    if (e.target.name === "country") {
+      const country = countries.find((c) => c.code === e.target.value);
       setFormData((prev) => {
         return { ...prev, phone: `+${country.phone} ` };
       });

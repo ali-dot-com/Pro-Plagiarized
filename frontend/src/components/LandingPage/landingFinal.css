@@ -171,6 +171,19 @@ button.learn-more:active::before {
     font-size: 2.6rem;
 }
 
+.service-card{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #1e9cb3;
+    transition: .5s;
+    border-radius: 5px;
+}
+.service-card:hover{
+    color: rgba(241, 241, 241, 1);
+    background-color: #1e9cb3;
+    border-bottom: 5px solid white;
+}
+
+
 .features-header>h1 {
     font-weight: 600 !important;
     font-size: 3.5rem;
@@ -296,9 +309,6 @@ button.learn-more:active::before {
     animation: rotating 6s linear infinite;
 }
 
-.imgArrows {
-    /* vertical-align: middle; */
-}
 
 @keyframes rotating {
     100% {
@@ -311,7 +321,7 @@ button.learn-more:active::before {
     font-weight: 600;
     background: rgba(31, 31, 31, .8);
     margin: 2em;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 

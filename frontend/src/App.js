@@ -6,8 +6,9 @@ import Signup from './components/signup';
 import Aboutus from './components/Aboutus/AboutUs';
 import LandingFinal from './components/LandingPage/LandingPageFinal'
 import {Routes, Route} from 'react-router-dom'
-
 import TestiMonials from './components/TestiMonials/TestiMonials'
+import SidePanel from './components/CRM/SidePanel/SidePanel';
+
 function App() {
   return(
     // <LogIn/>
@@ -15,12 +16,14 @@ function App() {
     // <Aboutus/>
     // <Landing/>
     //<LandingFinal/>
-    <Routes>
-		<Route path='/' element={<LandingFinal />} />
-		<Route path='aboutus' element={<Aboutus />} />
-    <Route path='/signup' element={<Signup/>}/>
-    <Route path='/temp' element={<TestiMonials/>}/>
-		</Routes> 
+    <SidePanel/>
+    // <Routes>
+		// <Route path='/' element={<LandingFinal />} />
+		// <Route path='aboutus' element={<Aboutus />} />
+    // <Route path='/signup' element={<Signup/>}/>
+    // <Route path='/temp' element={<TestiMonials/>}/>
+		// </Routes> 
+
   )
 }
 

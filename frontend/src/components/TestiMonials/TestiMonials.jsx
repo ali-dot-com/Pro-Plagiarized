@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import TestiMonialsDetails from '../TestiMonialsDetails/TestiMonialsDetails'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -55,7 +54,7 @@ const TestiMonials = () => {
     };
     return (
         <section id="testimonial" className="testimonials pt-70 pb-70">
-            <div className="container mt-5">
+            <div className="container my-2">
                 <div className="row">
                     <div className="col-md-12 m-0">
                         <h1 className='text-center fw-bold' style={{fontSize: "3rem"}}>Writing Services Samples</h1>
@@ -69,7 +68,7 @@ const TestiMonials = () => {
                                 testiMonials.length === 0 ?
                                     <div class="item">
                                         <div class="shadow-effect">
-                                            <img class="img-circle" src={userPic} />
+                                            <img class="img-circle" alt='' src={userPic} />
                                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
                                         </div>
                                         <div class="testimonial-name">

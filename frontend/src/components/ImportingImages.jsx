@@ -4,9 +4,10 @@ import i3 from '../assets/man.png'
 import i4 from '../assets/checked.png'
 import i5 from '../assets/badge.png'
 import i6 from '../assets/writer.png'
-import i7 from '../assets/test.png' 
-import i8 from '../assets/right.png' 
+import i7 from '../assets/test.png'
+import i8 from '../assets/documents.png'
+import i9 from '../assets/report.png' 
 
 export {
-    i1,i2,i3,i4,i5,i6,i7,i8
+    i1, i2, i3, i4, i5, i6, i7, i8, i9
 };

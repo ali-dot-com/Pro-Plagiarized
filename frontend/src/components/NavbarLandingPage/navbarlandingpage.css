@@ -11,3 +11,15 @@
 .navDropdown, #collasible-nav-dropdown{
     color: #23272B;
 }
+
+.navContainer>img {
+    width: 10%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+@media only screen and (width < 1000px) {
+    .navContainer>img {
+        width: 25%;
+    }
+}

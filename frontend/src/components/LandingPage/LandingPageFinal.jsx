@@ -3,10 +3,10 @@ import { Uploader } from "uploader";
 import { UploadDropzone } from "react-uploader";
 import { useState } from 'react';
 import arrow from '../../assets/down-arrow.svg'
-import { i1, i2, i3, i4, i5, i6, i7, i8 } from '../ImportingImages'
+import { i1, i2, i3, i4, i5, i6, i7, i8, i9 } from '../ImportingImages'
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import FeaturesCard from './FeaturesCard';
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import NavbarLandingPage from '../NavbarLandingPage/NavbarLandingPage';
 import TestiMonials from '../TestiMonials/TestiMonials'
 
@@ -18,7 +18,7 @@ function LandingPageFinal() {
     const [header, setHeader] = useState("Features");
     const [priceMode, setPriceMode] = useState(1);
     const [pill, setPill] = useState(0);
-    const [active, setActive] = useState(0);
+    // const [active, setActive] = useState(0);
 
     const headArray = ["Qualified Writer", "Highest Grade Guaranteed", "All Day, Everyday Service",
         "Fastest Report Time", "Quality Assured", "Error Free Results"]
@@ -188,13 +188,41 @@ function LandingPageFinal() {
                     </div>
                 </div>
 
+                {/* ---------- SERVICES ---------- */}
+
+                <div className="container-fluid">
+                    <div className="row">
+                        <h1 className='fw-bold text-center my-4'  style={{fontSize: "3rem"}}>Our Services</h1>
+                    </div>
+
+                    <div className="row d-flex justify-content-center py-3">
+                        <div className="col-md-5">
+                            <div className="service-card d-flex flex-column justify-content-center align-items-center py-4">
+                                <img className='mt-4 mb-2' src={i9} alt="" />
+                                <h3>Plagiarism Report</h3>
+                                <p className='fw-bold'>Starting from $10/Page</p>
+                            </div>
+                        </div>
+
+                    <div className="col-md-1"></div>
+
+                        <div className="col-md-5">
+                            <div className="service-card d-flex flex-column justify-content-center align-items-center py-4">
+                                <img className='mt-4 mb-2' src={i8} alt="" />
+                                <h3>Remove Plagiarism</h3>
+                                <p className='fw-bold'>Starting from $10/Page</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* ------------- FEATURES ------------------ */}
 
                 <div className="features-header mt-4">
                     <h1 className='text-center'>Features</h1>
                 </div>
 
-                <div className="row featuresFinal fw-semibold d-flex flex-row justify-content-center">
+                <div className="row featuresFinal fw-semibold d-flex flex-row justify-content-center" id='feature'>
                     <div className="col-lg-7 features-item">
                         <div className="row d-flex flex-row justify-content-center">
                             <div className="col-lg-6 features-1 d-flex flex-column align-items-center ">
@@ -275,7 +303,7 @@ function LandingPageFinal() {
 
             {/* ------------ HOW IT WORKS ----------- */}
 
-            <div className="container-fluid">
+            <div className="container-fluid" id='howwework'>
 
                 <div className="row">
                     <h1 className='text-center text-fluid fw-bold' style={{ fontSize: "3rem" }}>Wondering how we work?</h1>
@@ -320,12 +348,12 @@ function LandingPageFinal() {
                         </div>
                     </div>
 
-                    <div className="row mt-5 pt-4">
-                        <button class="get-services mx-auto mt-5">
+                    <div className="row mt-5 pt-5">
+                        <button class="heartbeat get-services mx-auto mt-5">
                             <span class="circle" aria-hidden="true">
                                 <span class="icon arrow"></span>
                             </span>
-                            <span class="button-text">Get Services</span>
+                            <span class="button-text ">Get Services</span>
                         </button>
                     </div>
 
