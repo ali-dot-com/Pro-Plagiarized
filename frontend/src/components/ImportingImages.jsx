@@ -7,7 +7,9 @@ import i6 from '../assets/writer.png'
 import i7 from '../assets/test.png'
 import i8 from '../assets/documents.png'
 import i9 from '../assets/report.png' 
+import importFile from '../assets/importFiles.png'
+import files from '../assets/multipleFiles.png'
 
 export {
-    i1, i2, i3, i4, i5, i6, i7, i8, i9
+    i1, i2, i3, i4, i5, i6, i7, i8, i9, importFile, files
 };

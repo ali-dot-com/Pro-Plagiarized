@@ -5,7 +5,6 @@
 
 .Navbar{
     box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
-    /* border-bottom: 1px solid black; */
 }
 
 .navDropdown,
@@ -13,14 +12,14 @@
     color: #23272B;
 }
 .hoverEffect{
-    background: #1e9cb3;
-    color: white;
+    background: #ffd813;
+    color: #23272B;
     border-radius: 20px;
     transition: .2s;
 }
 #hoverEffect:hover{
     color: white;
-    background: #12788a;
+    background: #ffd500;
 }
 
 .navContainer > img{

@@ -7,7 +7,7 @@ import Aboutus from './components/Aboutus/AboutUs';
 import LandingFinal from './components/LandingPage/LandingPageFinal'
 import {Routes, Route} from 'react-router-dom'
 import TestiMonials from './components/TestiMonials/TestiMonials'
-import SidePanel from './components/CRM/SidePanel/SidePanel';
+import Panel from './components/CRM/Panel/Panel';
 
 function App() {
   return(
@@ -15,8 +15,9 @@ function App() {
      //<Signup />
     // <Aboutus/>
     // <Landing/>
-    //<LandingFinal/>
-    <SidePanel/>
+    // <LandingFinal/>
+    <Panel />
+    // <BodyCRM/>
     // <Routes>
 		// <Route path='/' element={<LandingFinal />} />
 		// <Route path='aboutus' element={<Aboutus />} />
