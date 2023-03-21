@@ -10,9 +10,11 @@
 
 @media screen and (width < 450px) {
     .side-panel-body{
-        width: 5rem;
+        width: 17%;
     }
-
+    .crm-content{
+        width: 83%;
+    }
     .uploader{
         width: 220px;
     }
