@@ -8,19 +8,19 @@ import { UploadDropzone } from "react-uploader";
 
 function Panel() {
     const [sideActive,setSideActive] = useState(0);
+    const [pill, setPill] = useState(0);
 
     const uploader = new Uploader({
         apiKey: "free"
     });
 
-    const [pill, setPill] = useState(0);
-
+    
     return (
         <>
             <Nav/>
             <div className="container-fluid">
                 <div className="row flex-nowrap">
-                    <div className="col-auto col-md-2 px-0 side-panel-body">
+                    <div className="col-auto col-md-2 px-0 side-panel-body" style={{zIndex:"10"}}>
                         <div className="d-flex flex-column align-items-center align-items-sm-start pt-2 text-white vh-100 side-panel-flex">
                             <a href="/" className="d-flex align-items-center pb-3 w-100 px-2 text-decoration-none">
                                 <span className="fs-4 mb-0 ms-2 mt-2 d-none text-dark fw-bold d-sm-inline">TurnitinPRO.com</span>
@@ -74,7 +74,7 @@ function Panel() {
 
                         <div className="row">
                             <div className="col-lg-12 text-center px-5">
-                                <h2 className="fw-bold">what do you want to scan</h2>
+                                <h2 className="fw-bold">what do you want to scan?</h2>
                             </div>
                         </div>
 
@@ -104,6 +104,7 @@ function Panel() {
                             />
                         </div>
                     </div>
+
                 </div>
             </div>
 

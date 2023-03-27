@@ -10,7 +10,8 @@ const NavSidePanel = () => {
     return (
         <>
             <div>
-                <Navbar className="Navbar mb-0 position-sticky" collapseOnSelect expand="lg" bg="white" variant="light">
+                <Navbar className="Navbar mb-0 position-sticky" collapseOnSelect expand="lg" bg="white" variant="light"
+                style={{zIndex : "20"}}>
                     <Container className="navContainer">
                         <img className="me-5" src={Logo} alt="" />
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

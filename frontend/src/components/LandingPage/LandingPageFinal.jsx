@@ -303,7 +303,11 @@ function LandingPageFinal() {
 
             {/* ------------ HOW IT WORKS ----------- */}
 
-            <div className="container-fluid" id='howwework'>
+            {/* ------------ Desktop ----------- */}
+
+
+
+            <div className="container-fluid" id='desktopWorking'>
 
                 <div className="row">
                     <h1 className='text-center text-fluid fw-bold' style={{ fontSize: "3rem" }}>Wondering how we work?</h1>
@@ -328,7 +332,7 @@ function LandingPageFinal() {
                         </div>
 
                         <div className="arrowClass text-center">
-                            <img class=" rotating img-fluid" height={"50"} width={"50"} alt="submission" src="https://www.essaycompany.com/assets_new/images/circular-arrows.webp"></img>
+                            <img class=" rotating img-fluid" height={"50"} width={"50"} alt="arrow" src="https://www.essaycompany.com/assets_new/images/circular-arrows.webp"></img>
                         </div>
 
                         <div className="step-one p-3 workCard my-4 h-50">
@@ -361,6 +365,56 @@ function LandingPageFinal() {
             </div>
 
             <br />
+
+            {/* ------------ Mobile ----------- */}
+
+            <div className="container-fluid" id='mobileWorking'>
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <div className="row">
+                            <h1 className='text-center text-fluid fw-bold' style={{ fontSize: "2.5rem" }}>Wondering how we work?</h1>
+                        </div>
+
+                        <div className="row px-5 py-3">
+                                <div className="step-one p-3 workCard h-50">
+                                    <h3 className='f text-fluid'>Step One</h3>
+                                    <h4 className='fw-bold mt-3 text-fluid'>Upload</h4>
+                                    <hr />
+                                    <p className='text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                                </div>
+                        </div>
+
+                        <div className="row px-5 py-3">
+                            <div className="step-one p-3 workCard h-50">
+                                <h3 className='f text-fluid'>Step Two</h3>
+                                <h4 className='fw-bold mt-3 text-fluid'>Wait</h4>
+                                <hr />
+                                <p className='text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                            </div>
+                        </div>
+
+                        <div className="row px-5 py-3">
+                            <div className="step-one p-3 workCard h-50">
+                                <h3 className='f text-fluid'>Step Three</h3>
+                                <h4 className='fw-bold mt-3 text-fluid'>wait more</h4>
+                                <hr />
+                                <p className='text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                            </div>
+                        </div>
+
+                        <div className="row py-3 px-5">
+                            <div className="step-one p-3 workCard h-50">
+                                <h3 className='f text-fluid'>Step Four</h3>
+                                <h4 className='fw-bold mt-3 text-fluid'>Cancel</h4>
+                                <hr />
+                                <p className='text-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ratione libero dolor neque saepe aspernatur laborum sunt et nam corrupti.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
 
             {/* ------------- SAMPLES ----------- */}
 

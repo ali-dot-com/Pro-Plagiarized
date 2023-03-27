@@ -15,8 +15,8 @@ function App() {
      //<Signup />
     // <Aboutus/>
     // <Landing/>
-    // <LandingFinal/>
-    <Panel />
+    <LandingFinal/>
+    // <Panel />
     // <BodyCRM/>
     // <Routes>
 		// <Route path='/' element={<LandingFinal />} />
