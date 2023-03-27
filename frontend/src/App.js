@@ -8,6 +8,7 @@ import LandingFinal from './components/LandingPage/LandingPageFinal'
 import {Routes, Route} from 'react-router-dom'
 import TestiMonials from './components/TestiMonials/TestiMonials'
 import Panel from './components/CRM/Panel/Panel';
+import CrmTable from './components/CRM/CrmTable/CrmTable';
 
 function App() {
   return(
@@ -17,13 +18,18 @@ function App() {
     // <Landing/>
     <LandingFinal/>
     // <Panel />
+    // <LandingFinal/>
+    //<Panel />
     // <BodyCRM/>
-    // <Routes>
-		// <Route path='/' element={<LandingFinal />} />
-		// <Route path='aboutus' element={<Aboutus />} />
-    // <Route path='/signup' element={<Signup/>}/>
-    // <Route path='/temp' element={<TestiMonials/>}/>
-		// </Routes> 
+    <Routes>
+		 <Route path='/' element={<LandingFinal />} />
+		 <Route path='aboutus' element={<Aboutus />} />
+     <Route path='/signup' element={<Signup/>}/>
+     {/* <Route path='/temp' element={<TestiMonials/>}/> */}
+     <Route path='/userpanel' element={<Panel/>}/>
+     
+     
+		 </Routes> 
 
   )
 }
