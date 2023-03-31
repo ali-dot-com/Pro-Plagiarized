@@ -2,7 +2,7 @@ const express = require("express");
 const { config } = require('dotenv')
 const cors = require("cors");
 const path = require('path');
-const connectToMongo = require("configs/db");
+const connectToMongo = require('configs/db');
 
 
 const app = express();

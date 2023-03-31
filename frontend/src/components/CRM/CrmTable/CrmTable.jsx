@@ -53,7 +53,7 @@ const CrmTable = () => {
       <Table  striped responsive="lg">
         <thead>
           <tr>
-            
+            <th>Type</th>
             <th >Name</th>
             <th>Submite Date</th>
             <th>Expected Date</th>
@@ -64,6 +64,7 @@ const CrmTable = () => {
         <tbody>
           {records.map((record) => (
           <tr >
+            <td style={{width:"10%"}}>{record.type}</td>
             <td style={{width:"20%"}}>{record.name}</td>
             <td style={{width:"15%"}}>{record.submit_date}</td>
             <td style={{width:"15%"}}>{record.expected_date}</td>
