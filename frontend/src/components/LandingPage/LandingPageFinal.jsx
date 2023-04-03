@@ -120,7 +120,6 @@ function LandingPageFinal() {
         apiKey: "free"
     });
 
-
     return (
         <>
             <NavbarLandingPage />
@@ -282,7 +281,7 @@ function LandingPageFinal() {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 d-flex justify-content-center align-items-center">
+                    <div className="col-lg-4 features-right-card">
                         <FeaturesCard head={header} text={text} />
                     </div>
 
