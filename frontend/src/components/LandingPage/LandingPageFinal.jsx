@@ -1,7 +1,7 @@
 import './landingFinal.css'
 import { Uploader } from "uploader";
 import { UploadDropzone } from "react-uploader";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import arrow from '../../assets/down-arrow.svg'
 import { i1, i2, i3, i4, i5, i6, i7, i8, i9 } from '../ImportingImages'
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
@@ -322,7 +322,7 @@ function LandingPageFinal() {
                         </div>
                     </div>
 
-                    <div className="col-lg-4 p-4">
+                    <div className="col-lg-4 mt- p-4">
                         <div className="step-one p-3 workCard h-50 my-4">
                             <h3 className='text-fluid'>Step Two</h3>
                             <h4 className='fw-bold mt-3 text-fluid'>Wait</h4>

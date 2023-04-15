@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Logo from "../../../assets/150x90.png";
+import Logo from "../../../assets/250x150.png";
 
 const NavSidePanel = () => {
     return (

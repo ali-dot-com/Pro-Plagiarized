@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./sidePanel.css";
 import Nav from "../NavCRM/NavSide";
 import { importFile, files } from "../../ImportingImages";
@@ -16,6 +16,10 @@ function Panel() {
   // });
 
   // const [pill, setPill] = useState(0);
+
+  useEffect(()=> {
+    console.log("effect test")
+  }, [])
 
   const [selection, setSelection] = useState(0);
 

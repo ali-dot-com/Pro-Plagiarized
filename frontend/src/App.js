@@ -8,17 +8,19 @@ import LandingFinal from './components/LandingPage/LandingPageFinal'
 import {Routes, Route} from 'react-router-dom'
 import Panel from './components/CRM/Panel/Panel';
 import VerificationPage from './components/VerificationPage/VerificationPage';
+import AdminMain from './components/AdminCRM/AdminMain/AdminMain';
 
 function App() {
   return(
     <Routes>
-      <Route path='/' element={<LandingFinal />} />
-      <Route path='/login' element={<LogIn />} />
-      <Route path='/verificationPage' element={<VerificationPage />} />
-      <Route path='aboutus' element={<Aboutus />} />
-      <Route path='/signup' element={<Signup/>}/>
-      <Route path='/userpanel' element={<Panel/>}/>
-		 </Routes> 
+      <Route path='/'                   element={<LandingFinal />} />
+      <Route path='/login'              element={<LogIn />} />
+      <Route path='/verificationPage'   element={<VerificationPage />} />
+      <Route path='aboutus'             element={<Aboutus />} />
+      <Route path='/signup'             element={<Signup/>}/>
+      <Route path='/userpanel'          element={<Panel/>}/>
+      <Route path='/adminPanel'         element={<AdminMain/>}/>
+		</Routes> 
 
   )
 }
