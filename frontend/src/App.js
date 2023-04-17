@@ -14,14 +14,14 @@ import Guarantees from './components/Guarantees/Guarantee';
 function App() {
   return(
     <Routes>
-      <Route path='/'                   element={<LandingFinal />} />
-      <Route path='/login'              element={<LogIn />} />
-      <Route path='/verificationPage'   element={<VerificationPage />} />
-      <Route path='aboutus'             element={<Aboutus />} />
-      <Route path='/signup'             element={<Signup/>}/>
-      <Route path='/userpanel'          element={<Panel/>}/>
-      <Route path='/adminPanel'         element={<AdminMain/>}/>
-      <Route path='/guarantee'         element={<Guarantees/>}/>
+      <Route path='/'                 element={<LandingFinal />} />
+      <Route path='/login'            element={<LogIn />} />
+      <Route path='/verificationPage' element={<VerificationPage />} />
+      <Route path='aboutus'           element={<Aboutus />} />
+      <Route path='/signup'           element={<Signup/>}/>
+      <Route path='/userpanel'        element={<Panel/>}/>
+      <Route path='/adminPanel'       element={<AdminMain/>}/>
+      <Route path='/guarantee'        element={<Guarantees/>}/>
 		</Routes> 
 
   )

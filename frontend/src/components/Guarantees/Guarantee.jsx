@@ -103,8 +103,8 @@ function Guarantees () {
             </div>
         
         
-            <div className="container-fluid ">
-                <div className="row joinUsToday py-5">
+            <div className="container-fluid mt-3">
+                <div className="row joinUsToday py-4">
                     <div className="col-lg-12 text-center">
                         <h1 className='text-center fw-bold text-light'>We would love to hear from you</h1>
                         <h2 className="text-center text-light py-3">Join us today and get services from our professional experts</h2>
