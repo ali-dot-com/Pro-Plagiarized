@@ -23,7 +23,6 @@ const NavbarLandingPage = () => {
 
               <NavDropdown title="About Us" className="navDropdown fw-bold" id="collasible-nav-dropdown">
               <NavDropdown.Item className="fw-semibold text-primary text-fluid" href="#action/3.1">Guarantees</NavDropdown.Item>
-              <NavDropdown.Item className="fw-semibold text-primary text-fluid" href="#action/3.2">FAQs</NavDropdown.Item>
               <NavDropdown.Item className="fw-semibold text-primary text-fluid" href="#action/3.3">Feedback</NavDropdown.Item>
             </NavDropdown>
           </Nav>

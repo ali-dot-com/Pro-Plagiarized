@@ -9,6 +9,7 @@ import {Routes, Route} from 'react-router-dom'
 import Panel from './components/CRM/Panel/Panel';
 import VerificationPage from './components/VerificationPage/VerificationPage';
 import AdminMain from './components/AdminCRM/AdminMain/AdminMain';
+import Guarantees from './components/Guarantees/Guarantee';
 
 function App() {
   return(
@@ -20,6 +21,7 @@ function App() {
       <Route path='/signup'             element={<Signup/>}/>
       <Route path='/userpanel'          element={<Panel/>}/>
       <Route path='/adminPanel'         element={<AdminMain/>}/>
+      <Route path='/guarantee'         element={<Guarantees/>}/>
 		</Routes> 
 
   )
