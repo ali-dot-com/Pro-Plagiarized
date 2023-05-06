@@ -1,18 +1,19 @@
-.side-panel-body{
-    box-shadow: 2px 0px 10px rgba(12,12,12,0.4);
+.side-panel-body {
+    box-shadow: 2px 0px 10px rgba(12, 12, 12, 0.4);
 }
 
-.side-panel-flex > ul > li:hover{
+.side-panel-flex>ul>li:hover {
     background-color: #40636940;
     transition: .3s;
 }
 
 
 @media screen and (width < 450px) {
-    .side-panel-body{
+    .side-panel-body {
         width: 17%;
     }
-    .crm-content{
+
+    .crm-content {
         width: 83%;
     }
 }

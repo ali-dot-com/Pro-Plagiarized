@@ -25,6 +25,7 @@
     "mdb-react-ui-kit": "^5.1.0",
     "mdbootstrap": "^4.20.0",
     "popper.js": "^1.16.1",
+    "rc-table": "^7.31.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",

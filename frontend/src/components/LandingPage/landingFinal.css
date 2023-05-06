@@ -213,6 +213,12 @@ button.learn-more:active::before {
     box-shadow: 1px 1px 10px #444444;
 }
 
+.features-right-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .professor {
     margin-bottom: 2.5em;
 }
@@ -225,6 +231,9 @@ button.learn-more:active::before {
     height: 40px;
 }
 
+#mobileWorking{
+    display: none;
+}
 
 .stepCard {
     width: 300px;
@@ -1238,20 +1247,19 @@ button:hover .button-text {
     .header>span {
         font-size: 2.5rem;
     }
-
-    .stepOne>.stepCard,
-    .stepTwo>.stepCard,
-    .stepThree>.stepCard {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-content: space-evenly;
-        align-items: space-evenly;
-        margin: 2em 0 0 0;
+    #desktopWorking{
+        display: none;
+    }
+    #mobileWorking{
+        display: initial;
     }
 
     svg text {
         font-size: 3rem;
+    }
+
+    .features-right-card{
+        display: none;
     }
 }
 

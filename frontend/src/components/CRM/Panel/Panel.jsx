@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useEffect, useState } from "react";
 import "./sidePanel.css";
 import Nav from "../NavCRM/NavSide";
-import logo from "../../../assets/Logo.png";
 import { importFile, files } from "../../ImportingImages";
-import { Uploader } from "uploader";
-import { UploadDropzone } from "react-uploader";
+// import { Uploader } from "uploader";
+// import { UploadDropzone } from "react-uploader";
 import CrmTable from "../CrmTable/CrmTable";
+import NewScan from "../CrmNewScan/NewScan";
 
 function Panel() {
   const [sideActive, setSideActive] = useState(0);
 
-  const uploader = new Uploader({
-    apiKey: "free",
-  });
+  // const uploader = new Uploader({
+  //   apiKey: "free",
+  // });
 
-  const [pill, setPill] = useState(0);
+  // const [pill, setPill] = useState(0);
+
+  useEffect(()=> {
+    console.log("effect test")
+  }, [])
+
+  const [selection, setSelection] = useState(0);
 
   return (
     <>
@@ -46,7 +53,9 @@ function Panel() {
                   }
                   onClick={() => setSideActive(0)}
                 >
-                  <a href="#" className="nav-link align-middle px-0">
+                  <a href="#" className="nav-link align-middle px-0"
+                  onClick={() => setSelection(0)}
+                  >
                     <img src={importFile} height={30} alt="" />
                     <span className="ms-1 text-dark d-none d-sm-inline">
                       New Scan
@@ -63,7 +72,8 @@ function Panel() {
                   }
                   onClick={() => setSideActive(1)}
                 >
-                  <a href="#" className="nav-link px-0 align-middle ">
+                  <a href="#" className="nav-link px-0 align-middle "
+                    onClick={() => setSelection(1)}>
                     <img src={files} height={30} alt="" />
                     <span className="ms-1 text-dark d-none d-sm-inline">
                       My Files
@@ -72,9 +82,7 @@ function Panel() {
                 </li>
 
                 <li className="w-100 my-2 border btn">
-                  <a
-                    href="#"
-                    className="py-2 d-flex align-items-center justify-content-center text-dark text-decoration-none dropdown-toggle"
+                  <a className="py-2 d-flex align-items-center justify-content-center text-dark text-decoration-none dropdown-toggle"
                     id="dropdownUser1"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -116,75 +124,12 @@ function Panel() {
           {/* --------------- MIDDLE CONTENT -------------- */}
 
           <div className="col-lg-10 mt-3 crm-content py-3 container-fluid">
-             <CrmTable/> 
-            {/* <div className="row">
-              <div className="col-lg-12 text-center px-5">
-                <h2 className="fw-bold">what do you want to scan</h2>
-              </div>
-            </div>
 
-            <div className="row d-flex flex-row justify-content-center">
-              <div className="row d-block my-3 text-center mx-auto w-50">
-                <div
-                  className={
-                    pill === 1
-                      ? "col-lg-7 btn btn-outline-primary px-3 py-3 fw-bold rounded-5"
-                      : "col-lg-5 btn btn-outline-primary px-3 py-3 fw-bold mx-auto rounded-5"
-                  }
-                  onClick={() => setPill(1)}
-                  style={
-                    pill === 1
-                      ? {
-                          backgroundColor: "rgb(12,100,215)",
-                          color: "white",
-                          transition: ".3s",
-                        }
-                      : {
-                          backgroundColor: "white",
-                          color: "rgb(12,100,215)",
-                          transition: ".3s",
-                        }
-                  }
-                >
-                  Remove Plagiarism
-                </div>
-
-                <div
-                  className={
-                    pill === 2
-                      ? "col-lg-7 btn btn-outline-primary px-3 py-3 fw-bold rounded-5"
-                      : "col-lg-5 btn btn-outline-primary px-3 py-3 fw-bold mx-auto rounded-5"
-                  }
-                  onClick={() => setPill(2)}
-                  style={
-                    pill === 2
-                      ? {
-                          backgroundColor: "rgb(12,100,215)",
-                          color: "white",
-                          transition: ".3s",
-                        }
-                      : {
-                          backgroundColor: "white",
-                          color: "rgb(12,100,215)",
-                          transition: ".3s",
-                        }
-                  }
-                >
-                  Detect Plagiarism
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-8 mx-auto uploader">
-              <UploadDropzone
-                uploader={uploader}
-                options={{ multi: true }}
-                onComplete={(files) => console.log(files)}
-                width="100%"
-                height="300px"
-              />
-            </div> */}
+            {selection === 0 ? <NewScan/> : <CrmTable/>}
+            {/* <CrmTable /> */}
+            {/* <NewScan /> */}
           </div>
+
         </div>
       </div>
     </>

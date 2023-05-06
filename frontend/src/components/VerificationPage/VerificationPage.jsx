@@ -1,12 +1,14 @@
-import './VerificationPage.css'
 import React from 'react';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import './VerificationPage.css'
+
 
 function VerificationPage() {
     const username = "TinakdhinNa"
 
     return (
         <>
-            <div className="container-fluid p-0 m-0">
+            <div className="container-fluid backgroundImage p-0 m-0">
                 <div className="row">
                     <div className="col-md-12 d-flex flex-column justify-content-center align-items-center">
 

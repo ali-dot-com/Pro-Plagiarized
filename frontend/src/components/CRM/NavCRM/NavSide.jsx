@@ -4,13 +4,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Logo from "../../../assets/150x90.png";
+import Logo from "../../../assets/250x150.png";
 
 const NavSidePanel = () => {
     return (
         <>
             <div>
-                <Navbar className="Navbar mb-0 position-sticky" collapseOnSelect expand="lg" bg="white" variant="light">
+                <Navbar className="Navbar mb-0 position-sticky" collapseOnSelect expand="lg" bg="white" variant="light"
+                style={{zIndex : "20"}}>
                     <Container className="navContainer">
                         <img className="me-5" src={Logo} alt="" />
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
