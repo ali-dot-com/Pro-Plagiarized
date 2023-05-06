@@ -1,8 +1,9 @@
 import "./signup.css";
-import Logo from "../assets/Logo.png";
-import { useState } from "react";
+import Logo from "../../assets/Logo.png";
+import { useEffect, useState } from "react";
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
+import axios from "axios"
 
 function Signup() {
 
@@ -11,12 +12,12 @@ function Signup() {
     name: "",
     country: "",
     email: "",
-    phone: "",
+    phoneNumber: "",
     password: "",
   });
   const [show, setShow] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
-  
+  const [validFormat, setValidFormat] = useState("");
   // All countries
   // length 252
   const countries = [
@@ -275,7 +276,7 @@ function Signup() {
   ];
 
   const onChange = (e) => {
-    if(e.target.name === "phone" )
+    if(e.target.name === "phoneNumber" )
     {
         const tempPhoneRegex = /^\+\d{1,4}[\d\s]+$/;
         if(!tempPhoneRegex.test(e.target.value))
@@ -290,12 +291,12 @@ function Signup() {
     if (e.target.name === "country") {
       const country = countries.find((c) => c.code === e.target.value);
       setFormData((prev) => {
-        return { ...prev, phone: `+${country.phone} ` };
+        return { ...prev, phoneNumber: `+${country.phone} ` };
       });
     }
     console.log(formData);
   };
-
+ 
 
   const HandleSubmit = (e)=>{
     e.preventDefault();
@@ -320,9 +321,10 @@ function Signup() {
         setShow(true);
         return
     }
-    if(!phoneRegex.test(formData.phone))
+    if(!phoneRegex.test(formData.phoneNumber))
     {
         setToastMessage("Whatsapp number is not valid")
+        setValidFormat("Valid format: +1 111128128")
         setShow(true);
         return
     }
@@ -333,8 +335,21 @@ function Signup() {
         setShow(true);
         return
     }
+    
+   
+    axios.post(`${process.env.REACT_APP_API_URL}signup`, document.querySelector('#my-form'), {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then((res)=>{
+      console.log(res)
+    })
+
+
+    
    
 }
+
 
   return (
     <>
@@ -344,9 +359,15 @@ function Signup() {
             <span style={{marginRight:"5px",width:"15px", height:"15px", borderRadius:"7.5px", backgroundColor:"red"}}></span>
             <strong className="me-auto">Invalid Input!</strong>
           </Toast.Header>
-          <Toast.Body>{toastMessage}</Toast.Body>
+          <Toast.Body>
+            <span className="fw-bold">{toastMessage}</span>
+            <br/>
+            {validFormat}
+          </Toast.Body>
         </Toast>
         </ToastContainer>
+
+
       <div className="container-fluid">
         <div className="col-lg-5 form-items d-flex align-items-center justify-content-center mt-3">
           <img src={Logo} style={{ width: "50%" }} alt="turnitinPro logo"></img>
@@ -355,6 +376,7 @@ function Signup() {
           <form
             action=""
             onSubmit={HandleSubmit}
+            id="my-form"
             className="form mt-4 d-flex align-items-center justify-content-center"
           >
             <div class="form-floating mb-2">
@@ -368,7 +390,7 @@ function Signup() {
                 placeholder="Full Name"
                 autoComplete="off"
               />
-              <label for="floatingInput">Full Name</label>
+              <label for="name">Full Name</label>
             </div>
 
             <div class="form-floating mb-2">
@@ -387,7 +409,7 @@ function Signup() {
                   <option value={obj.code}>{obj.name}</option>
                 ))}
               </select>
-              <label for="floatingInput">Country</label>
+              <label for="country">Country</label>
             </div>
 
             <div class="form-floating mb-2">
@@ -401,20 +423,20 @@ function Signup() {
                 placeholder="Email address"
                 autoComplete="off"
               />
-              <label for="floatingInput">Email address</label>
+              <label for="email">Email address</label>
             </div>
             <div class="form-floating mb-2">
               <input
                 onChange={(e) => onChange(e)}
                 type="text"
-                name="phone"
-                value={formData.phone}
+                name="phoneNumber"
+                value={formData.phoneNumber}
                 className="form-control"
                 id="floatingInput"
                 placeholder="Email address"
                 autoComplete="off"
               />
-              <label for="floatingInput">Phone Number</label>
+              <label for="phoneNumber">Phone Number</label>
             </div>
             <div class="form-floating">
               <input
@@ -427,7 +449,7 @@ function Signup() {
                 placeholder="Password"
                 autoComplete="off"
               />
-              <label for="floatingPassword">Password</label>
+              <label for="password">Password</label>
             </div>
 
             <div className="form-floating">

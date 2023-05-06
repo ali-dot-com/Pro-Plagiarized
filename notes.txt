@@ -1,0 +1,6 @@
+Email Verification:
+	Status code =  1 when account is verrified 
+	Status code =  0 when account is in record but code entered is not right
+	Status code = -1 when no code is found, (A- Account is not sign up, B- error occur while sending code)
+		1- Press Resend Code if you get code that's good
+		2- Otherwise sign up again 

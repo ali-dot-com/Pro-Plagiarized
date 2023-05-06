@@ -1,14 +1,15 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import LogIn from './components/signin';
-import Signup from './components/signup';
+import LogIn from './components/Signin/signin';
+import Signup from './components/Signup/signup';
 import Aboutus from './components/Aboutus/AboutUs';
 import LandingFinal from './components/LandingPage/LandingPageFinal'
 import {Routes, Route} from 'react-router-dom'
-import TestiMonials from './components/TestiMonials/TestiMonials'
+
 import Panel from './components/CRM/Panel/Panel';
-import CrmTable from './components/CRM/CrmTable/CrmTable';
+
+import VerificationPage from './components/VerificationPage/VerificationPage';
 
 function App() {
   return(
@@ -25,6 +26,9 @@ function App() {
      <Route path='/signup' element={<Signup/>}/>
      {/* <Route path='/temp' element={<TestiMonials/>}/> */}
      <Route path='/userpanel' element={<Panel/>}/>
+     <Route path='/login' element={<LogIn/>}/>
+     <Route path='/verify' element={<VerificationPage/>}/>
+
      
      
 		 </Routes> 
